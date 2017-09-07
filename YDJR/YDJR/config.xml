@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.hello" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SuppressesLongPressGesture" value="false" />
+    <preference name="Suppresses3DTouchGesture" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="HandleOpenUrl">
+        <param name="ios-package" value="CDVHandleOpenURL" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="IntentAndNavigationFilter">
+        <param name="ios-package" value="CDVIntentAndNavigationFilter" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="GestureHandler">
+        <param name="ios-package" value="CDVGestureHandler" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <preference name="CameraUsesGeolocation" value="false" />
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Capture">
+        <param name="ios-package" value="CDVCapture" />
+    </feature>
+    <feature name="Media">
+        <param name="ios-package" value="CDVSound" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
+    </feature>
+    
+<!-- 网络请求组件   -->
+    <feature name="LLFNetwork">
+        <param name="ios-package" value="LLFNetworkPlugin"/>
+    </feature>
+    
+<!-- 相机组件   -->
+    <feature name="LLFMedia">
+        <param name="ios-package" value="LLFMediaPlugin"/>
+    </feature>
+
+<!-- 返回原生组件   -->
+    <feature name="BackToNative">
+        <param name="ios-package" value="BackToNativePlugin"/>
+    </feature>
+<!-- 意向单传值组件   -->
+<feature name="SDCCutomerIntrestInfo">
+    <param name="ios-package" value="SDCCutomerIntrestInfoPlugin"/>
+</feature>
+
+    
+<!-- 更换金融方案组件   -->
+<feature name="LSChangeFinancialProductPlugin">
+    <param name="ios-package" value="LSChangeFinancialProductPlugin"/>
+</feature>
+
+<!-- 查看合同组件   -->
+<feature name="LSLookContract">
+	<param name="ios-package" value="LSLookContractPlugin"/>
+</feature>
+
+<!-- 生成以及提交合同PDF组件   -->
+<feature name="LSContractInfoPlugin">
+	<param name="ios-package" value="LSContractInfoPlugin"/>
+</feature>
+
+<!-- 二维码扫描信息插件   -->
+<feature name="LSScanLife">
+	<param name="ios-package" value="LSScanLifePlugin"/>
+</feature>
+
+<!-- 影像采集组件   -->
+<feature name="LSImageCollection">
+	<param name="ios-package" value="LSImageCollectionPlugin"/>
+</feature>
+
+<!-- 取消申请插件   -->
+<feature name="LSCancelApply">
+	<param name="ios-package" value="LSCancelApplyPlugin"/>
+</feature>
+
+<!-- 获取缓存字典组件   -->
+<feature name="LLFCheckDataList">
+    <param name="ios-package" value="LLFCheckDataListPlugin"/>
+</feature>
+
+<!-- 调用打印机组件   -->
+<feature name="LLFPrint">
+    <param name="ios-package" value="LLFPrintPlugin"/>
+</feature>
+
+<!-- 数据库操作组件   -->
+<feature name="DBMangerHandle">
+    <param name="ios-package" value="DBMangerHandlePlugin"/>
+</feature>
+<!-- 查看申请表传值组件   -->
+<feature name="LookApply">
+    <param name="ios-package" value="LookApplyPlugin"/>
+</feature>
+<!-- 获取当前登录用户的信息和客户信息   -->
+<feature name="GetUserModelInfo">
+    <param name="ios-package" value="GetUserModelInfoPlugin"/>
+</feature>
+<!-- 更新消息类型的数据   -->
+<feature name="UpDataMessageModel">
+    <param name="ios-package" value="UpDataMessageModelPlugin"/>
+</feature>
+<!--  创建产品申请  -->
+<feature name="ProductApplyRequest">
+    <param name="ios-package" value="ProductApplyRequestPlugin"/>
+</feature>
+<!--  预览合同  -->
+<feature name="PreviewContract">
+    <param name="ios-package" value="PreviewContractPlugin"/>
+</feature>
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <name>HelloWorld</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

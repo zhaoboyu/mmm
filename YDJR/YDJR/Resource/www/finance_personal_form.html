@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>融资租赁个人</title>
+  <style>
+    html,body {
+      width: 100%;
+      /*height: 100%;*/
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust:none;
+    }
+    .all {
+      /*width: 95%;*/
+      width: 950px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+    .title {
+      width: 100%;
+      text-align: center;
+      font-family: MicrosoftYaHei;
+      font-size: 16px;
+      color: #333333;
+      margin: 20px 0 6px;
+    }
+    .subtitle {
+      width: 100%;
+      text-align: center;
+      font-family: MicrosoftYaHei;
+      font-size: 12px;
+      color: #333333;
+      margin-bottom: 15px;
+    }
+    table {
+
+      width: 100%;
+      border: 1px solid #666666;
+      font-size: 12px;
+      color: #333333;
+      border-collapse: collapse;
+    }
+    table tr {
+      height: 30px;
+    }
+    table tr.classic_title {
+      background: #CCCCCC;
+      border: 1px solid #666666;
+    }
+    table tr td {
+      width: 150px;
+      border: 1px solid #666666;
+    }
+    td input[type="text"] {
+      width: 90%;
+      height: 100%;
+      border: none;
+      outline: none;
+      font-size: 12px;
+    }
+    /*td input[type="checkbox"] {
+      width: 10px;
+    }*/
+
+
+  </style>
+</head>
+<body>
+  <div class="all">
+    <div class="title">上海永达融资租赁有限公司</div>
+    <div class="subtitle">汽车融资租赁申请书(个人版)</div>
+    <table>
+      <!--购车店面信息-->
+      <tr class="classic_title">
+        <td colspan="8">购车店面信息</td>
+      </tr>
+      <tr>
+        <td>4S简称</td>
+        <td colspan="3">
+          <input value="" id="OperateOrgID" readonly type="text"/>
+        </td>
+        <td>开票经销商</td>
+        <td colspan="3">
+          <input id="DealerInvoice" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>金融经理</td>
+        <td colspan="3">
+          <input id="OperateUserID" readonly value="" type="text"/>
+        </td>
+        <td>联系电话</td>
+        <td colspan="3">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <!--融资信息-->
+      <tr class="classic_title">
+        <td colspan="8">融资信息</td>
+      </tr>
+      <tr>
+        <td>车辆品牌</td>
+        <td colspan="2">
+          <input value="" readonly id="CarBrand" type="text"/>
+        </td>
+        <td>车辆型号</td>
+        <td colspan="2">
+          <input value="" readonly id="CarModel" type="text"/>
+        </td>
+        <td>车辆颜色</td>
+        <td>
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>车辆发票金额</td>
+        <td colspan="2">
+          <input id="ContractAmount" readonly value="" type="text"/>
+        </td>
+        <td>车辆指导价</td>
+        <td colspan="4">
+          <input id="GuidePrice" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>购置税(如有)</td>
+        <td>
+          <input id="PurchaseTax" readonly value="" type="text"/>
+        </td>
+        <td>保险年限</td>
+        <td>
+          <input id="UptoTerm" readonly value="" type="text"/>
+        </td>
+        <td>预计保费(每年)</td>
+        <td>
+          <input id="PremiumPrice" readonly value="" type="text"/>
+        </td>
+        <td>保险金额</td>
+        <td>
+          <input id="Insurance" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>保险信息</td>
+        <td colspan="7">
+          <input type="checkbox" name="insurance" disabled value=""/>第三者责任险
+          <input type="checkbox" name="insurance" disabled value=""/>交强险
+          <input type="checkbox" name="insurance" disabled value=""/>车损险
+          <input type="checkbox" name="insurance" disabled value=""/>全车盗抢险
+          <input type="checkbox" name="insurance" disabled value=""/>玻璃单独破碎险
+          <input type="checkbox" name="insurance" disabled value=""/>车上人员险
+          <input type="checkbox" name="insurance" disabled value=""/>车身划痕险
+          <input type="checkbox" name="insurance" disabled value=""/>车损不计免赔险
+          <input type="checkbox" name="insurance" disabled value=""/>车船税
+        </td>
+      </tr>
+      <tr>
+        <td>产品名称</td>
+        <td colspan="2">
+          <input id="ProductPlan1" readonly value="" type="text"/>
+        </td>
+        <td>融资范围</td>
+        <td colspan="2">
+          <input type="text" readonly value="" id="IncludeAmountType"/>
+        </td>
+        <td>申请租赁期限</td>
+        <td>
+          <input id="BusinessTerm" value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>保证金比例</td>
+        <td>
+          <input id="BZJPercent" readonly value="" type="text"/>
+        </td>
+        <td>保证金金额</td>
+        <td>
+          <input id="BZJAmount" value="" readonly type="text"/>
+        </td>
+        <td>首付比例</td>
+        <td>
+          <input id="FPPercent" readonly value="" type="text"/>
+        </td>
+        <td>首付金额</td>
+        <td>
+          <input id="FPPAmount" value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>留购价</td>
+        <td>
+          <input id="RRAmount" readonly value="" type="text"/>
+        </td>
+        <td>手续费</td>
+        <td>
+          <input id="FEEPercentAmount" readonly value="" type="text"/>
+        </td>
+        <td>业务类型</td>
+        <td>
+          <input id="BusinessSubType" readonly value="" type="text"/>
+        </td>
+        <td>牌照来源</td>
+        <td>
+          <input id="CardOrigin" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>租牌费用/月(如有)</td>
+        <td colspan="2">
+          <input id="RentCard" readonly value="" type="text"/>
+        </td>
+        <td colspan="2">牌照提供方(客户牌照)</td>
+        <td colspan="3">
+          <input type="checkbox" disabled name="card_suport"/>承租人
+          <input type="checkbox" disabled name="card_suport"/>担保人:
+          <input type="text" disabled style="width: 100px;border-bottom: 1px solid #000000;border-radius: 0px;"/>
+        </td>
+      </tr>
+      <tr>
+        <td>备注</td>
+        <td colspan="7">
+          <input type="text" readonly value=""/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8">
+          备注：保险费、牌照费、购置税均为预估金额，实际金额将根据发票进行确认。
+        </td>
+      </tr>
+      <!--申请人信息-->
+      <tr class="classic_title">
+        <td colspan="8">申请人信息</td>
+      </tr>
+      <tr>
+        <td>姓名</td>
+        <td colspan="2">
+          <input id="CustomerName" readonly value="" type="text"/>
+        </td>
+        <td>性别</td>
+        <td>
+          <input id="SEX" readonly value="" type="text"/>
+        </td>
+        <td>婚姻状况</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>证件类型</td>
+        <td colspan="3">
+          <input id="CustomerCertType" readonly value="" type="text"/>
+        </td>
+        <td>证件号码</td>
+        <td colspan="3">
+          <input id="CustomerCertID" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>手机号码</td>
+        <td colspan="3">
+          <input id="CustomeTel" readonly value="" type="text"/>
+        </td>
+        <td>现居住地址</td>
+        <td colspan="3">
+          <input id="CustomerAddress" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>单位名称</td>
+        <td colspan="3">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>工作单位地址</td>
+        <td colspan="3">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <!--联合承租企业（如有）-->
+      <tr class="classic_title">
+        <td colspan="8">联合承租企业(如有)</td>
+      </tr>
+      <tr>
+        <td>企业名称</td>
+        <td colspan="3">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>办公地址</td>
+        <td colspan="3">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>联系人姓名</td>
+         <td>
+          <input value="" readonly type="text"/>
+        </td>
+        <td>联系电话</td>
+         <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>企业固话</td>
+         <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <!--开票信息-->
+      <tr class="classic_title">
+        <td colspan="8">开票信息</td>
+      </tr>
+      <tr>
+        <td>纳税人类型</td>
+        <td colspan="2">
+          <input id="TaxpayerType" readonly value="" type="text"/>
+        </td>
+        <td>发票抬头</td>
+        <td colspan="4">
+          <input id="InvoiceHeader" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>纳税人识别号</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>发票开户行及账号</td>
+        <td colspan="4">
+          <input id="InvoiceAccount" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>开票地址及电话</td>
+        <td colspan="3">
+          <input id="InvoiceAddTel" readonly value="" type="text"/>
+        </td>
+        <td>发票寄送地址</td>
+        <td colspan="3">
+          <input id="InvoiceSendAddress" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <!--担保人信息-->
+      <tr class="classic_title">
+        <td colspan="8">担保人信息(申请人已婚须填写配偶，若无配偶可不填或者填写直系亲属：父母、子女)</td>
+      </tr>
+      <tr>
+        <td>姓名</td>
+        <td>
+          <input id="GuaranterName" readonly value="" type="text"/>
+        </td>
+        <td>与申请人关系</td>
+        <td colspan="2">
+          <input id="GuaranterRelationShip" readonly value="" type="text"/>
+        </td>
+        <td>证件号码</td>
+        <td colspan="2">
+          <input id="GuaranterCertID" readonly value="" type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>手机号码</td>
+        <td colspan="2">
+          <input id="GuaranterTel" readonly value="" type="text"/>
+        </td>
+        <td>现居住地址</td>
+        <td colspan="4">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td>单位名称</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>工作单位地址</td>
+        <td colspan="4">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <!--紧急联系人信息-->
+      <tr class="classic_title">
+        <td colspan="8">紧急联系人信息</td>
+      </tr>
+      <tr>
+        <td>姓名</td>
+        <td>
+          <input value="" readonly type="text"/>
+        </td>
+        <td>与申请人关系</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>手机号码</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8" style="background-color: yellow;">备注：紧急联系人信息不得于申请人、法定代表人、担保人的信息重复。</td>
+      </tr>
+      <tr>
+        <td>备注</td>
+        <td colspan="7">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <!--申请人声明与授权-->
+      <tr>
+        <td colspan="8">申请人声明与授权</td>
+      </tr>
+      <tr>
+        <td colspan="8">
+          <p>
+            1.申请人承诺提供的所有资料和信息是真实、有效的，并确认是自愿提供的。<br>
+            2.申请人同意以此申请书作为向出租人申请车辆融资租赁的依据，并愿意按照出租人的规定办理融资租赁手续；不论批准与否，此申请表格不要求发还。<br>
+            3.申请人承诺会配合出租人及出租人委派的代理公司进行的与融资有关的资信调查工作。<br>
+            4.申请人了解，出租人会搜集并保存与此融资租赁申请有关的申请人的信息和资料。申请人授权出租人严格保护和使用这些信息和资料。<br>
+            5.申请人授权出租人可以使用申请人所提供的信息和资料用于出租人的市场调研及内部报告和分析之用，并向申请人推荐其他的产品和服务。<br\>
+            6.签署人同意上海永达融资租赁有限公司根据租赁申请审批和后续管理的需要，不时地向有关征信机构了解签署人的信用信息和信用评估信息等，同时授权上海永<br>
+            达融资租赁有限公司向征信机构提供本人的信用信息，并用于相关法律法规规章和规范性文件规定的用途。<br>
+            7. 签署人承诺其已获得其配偶（如有）的合法书面授权，代表其配偶以该配偶的名义签署本承诺与授权书，且签署人在本承诺与授权书上代表其配偶签署的效力等<br>
+            同签署人配偶亲笔签署。签署人配偶一经签署本承诺与授权书，有关签署人的条款无论是否提及签署人配偶，即对签署人配偶生效。<br>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>申请人签名：</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>配偶签名：</td>
+        <td>
+          <input value="" readonly type="text"/>
+        </td>
+        <td>担保人签名：</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8">*担保人在此确认对以上申请人在该租赁项目项下的所有债务承担连带保证责任。</td>
+      </tr>
+      <tr>
+        <td>销售顾问：</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+        <td>金融专员：</td>
+        <td>
+          <input value="" readonly type="text"/>
+        </td>
+        <td>申请日期：</td>
+        <td colspan="2">
+          <input value="" readonly type="text"/>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    window.onload = function () {
+      var obj_val = localStorage.getItem("info_obj");
+      var par = JSON.parse(obj_val);
+      console.log("par:",par);
+
+
+      //购车店面信息
+      if(par.OperateOrgID != undefined){
+        document.getElementById("OperateOrgID").value = par.OperateOrgID;
+      }
+      if(par.DealerInvoice != undefined){
+        document.getElementById("DealerInvoice").value = par.DealerInvoice;
+      }
+      if(par.OperateUserID != undefined){
+        document.getElementById("OperateUserID").value = par.OperateUserID;
+      }
+//      融资信息
+      if(par.CarBrand != undefined){
+        document.getElementById("CarBrand").value = par.CarBrand;
+      }
+      if(par.CarModel != undefined){
+        document.getElementById("CarModel").value = par.CarModel;
+      }
+      if(par.ContractAmount != undefined){
+        document.getElementById("ContractAmount").value = par.ContractAmount;
+      }
+      if(par.GuidePrice != undefined){
+        document.getElementById("GuidePrice").value = par.GuidePrice;
+      }
+      if(par.PurchaseTax != undefined){
+        document.getElementById("PurchaseTax").value = par.PurchaseTax;
+      }
+      if(par.UptoTerm != undefined){
+        document.getElementById("UptoTerm").value = par.UptoTerm;
+      }
+      if(par.PremiumPrice != undefined){
+        document.getElementById("PremiumPrice").value = par.PremiumPrice;
+      }
+      if(par.Insurance != undefined){
+        document.getElementById("Insurance").value = par.Insurance;
+      }
+      if(par.ProductPlan1 != undefined){
+        document.getElementById("ProductPlan1").value = par.ProductPlan1;
+      }
+      if(par.IncludeAmountType != undefined){
+        document.getElementById("IncludeAmountType").value = par.IncludeAmountType;
+      }
+      if(par.BusinessTerm != undefined){
+        document.getElementById("BusinessTerm").value = par.BusinessTerm;
+      }
+      if(par.BZJPercent != undefined){
+        document.getElementById("BZJPercent").value = par.BZJPercent;
+        document.getElementById("BZJAmount").value = Math.ceil(Number(par.BZJPercent/100)*Number(par.totalMoney));
+
+      }
+      if(par.FPPercent != undefined){
+        document.getElementById("FPPercent").value = par.FPPercent;
+        document.getElementById("FPPAmount").value = Math.ceil(Number(par.FPPercent/100)*Number(par.totalMoney));
+      }
+      if(par.RRAmount != undefined){
+        document.getElementById("RRAmount").value = par.RRAmount;
+      }
+      if(par.FEEPercentAmount != undefined){
+        document.getElementById("FEEPercentAmount").value = Number(par.FEEPercentAmount).toFixed(2);
+      }
+      if(par.BusinessSubType != undefined){
+        document.getElementById("BusinessSubType").value = par.BusinessSubType;
+      }
+      if(par.CardOrigin != undefined){
+        document.getElementById("CardOrigin").value = par.CardOrigin;
+      }
+      if(par.RentCard != undefined){
+        document.getElementById("RentCard").value = par.RentCard;
+      }
+      //申请人信息
+      if(par.CustomerName != undefined){
+        document.getElementById("CustomerName").value = par.CustomerName;
+      }
+      if(par.SEX != undefined){
+        document.getElementById("SEX").value = par.SEX;
+      }
+      if(par.CustomerCertType != undefined){
+        document.getElementById("CustomerCertType").value = par.CustomerCertType;
+      }
+      if(par.CustomerCertID != undefined){
+        document.getElementById("CustomerCertID").value = par.CustomerCertID;
+      }
+      if(par.CustomeTel != undefined){
+        document.getElementById("CustomeTel").value = par.CustomeTel;
+      }
+      if(par.CustomerAddress != undefined){
+        document.getElementById("CustomerAddress").value = par.CustomerAddress;
+      }
+//      开票信息
+      if(par.TaxpayerType!=undefined){
+        document.getElementById("TaxpayerType").value = par.TaxpayerType;
+      }
+      if(par.InvoiceHeader!=undefined){
+        document.getElementById("InvoiceHeader").value = par.InvoiceHeader;
+      }
+      if(par.InvoiceAccount!=undefined){
+        document.getElementById("InvoiceAccount").value = par.InvoiceAccount;
+      }
+      if(par.InvoiceAddTel!=undefined){
+        document.getElementById("InvoiceAddTel").value = par.InvoiceAddTel;
+      }
+      if(par.InvoiceSendAddress!=undefined){
+        document.getElementById("InvoiceSendAddress").value = par.InvoiceSendAddress;
+      }
+//      担保人信息
+      if(par.GuaranterName != undefined){
+        document.getElementById("GuaranterName").value = par.GuaranterName;
+      }
+      if(par.GuaranterRelationShip != undefined){
+        document.getElementById("GuaranterRelationShip").value = par.GuaranterRelationShip;
+      }
+      if(par.GuaranterCertID != undefined){
+        document.getElementById("GuaranterCertID").value = par.GuaranterCertID;
+      }
+      if(par.GuaranterTel != undefined){
+        document.getElementById("GuaranterTel").value = par.GuaranterTel;
+      }
+
+
+
+
+
+
+
+/**************************************************************************/
+
+      if(par.RegionManager != undefined){
+        document.getElementById("RegionManager").value = par.RegionManager;
+      }
+      if(par.Region != undefined){
+        document.getElementById("Region").value = par.Region;
+      }
+      if(par.AsUserID != undefined){
+        document.getElementById("AsUserID").value = par.AsUserID;
+      }
+      if(par.ProductPlan != undefined){
+        document.getElementById("ProductPlan").value = par.ProductPlan;
+      }
+
+      //融资详情
+      if(par.BusinessSum != undefined){
+        document.getElementById("BusinessSum").value = par.BusinessSum;
+      }
+      /*if(par.RRPercent != undefined){
+       document.getElementById("RRPercent").innerHTML = par.RRPercent;
+       }*/
+
+      //保险信息
+      if(par.ThirdDutyFlag != undefined){
+        document.getElementById("ThirdDutyFlag").value = par.ThirdDutyFlag;
+      }
+      if(par.EforceInsurance != undefined){
+        document.getElementById("EforceInsurance").value = par.EforceInsurance;
+      }
+      if(par.CarLossInsFlag != undefined){
+        document.getElementById("CarLossInsFlag").value = par.CarLossInsFlag;
+      }
+      if(par.NofreerFlag != undefined){
+        document.getElementById("NofreerFlag").value = par.NofreerFlag;
+      }
+      if(par.CarRobberyFlag != undefined){
+        document.getElementById("CarRobberyFlag").value = par.CarRobberyFlag;
+      }
+      if(par.GlassBreakFlag != undefined){
+        document.getElementById("GlassBreakFlag").value = par.GlassBreakFlag;
+      }
+      if(par.CarPersonSum != undefined){
+        document.getElementById("CarPersonSum").value = par.CarPersonSum;
+      }
+      if(par.CarBodyLossSum != undefined){
+        document.getElementById("CarBodyLossSum").value = par.CarBodyLossSum;
+      }
+      //还款账户信息
+
+      if(par.AccountCertID != undefined){
+        document.getElementById("AccountCertID").value = par.AccountCertID;
+      }
+      if(par.AccountName != undefined){
+        document.getElementById("AccountName").value = par.AccountName;
+      }
+      if(par.AccountOrgID != undefined){
+        document.getElementById("AccountOrgID").value = par.AccountOrgID;
+      }
+      if(par.AccountNo != undefined){
+        document.getElementById("AccountNo").value = par.AccountNo;
+      }
+      if(par.PayFrequencyType != undefined){
+        document.getElementById("PayFrequencyType").value = par.PayFrequencyType;
+      }
+      //担保人信息
+      if(par.GuaranterCertType != undefined){
+        document.getElementById("GuaranterCertType").value = par.GuaranterCertType;
+      }
+
+
+    }
+
+  </script>
+  
+</body>
+</html>

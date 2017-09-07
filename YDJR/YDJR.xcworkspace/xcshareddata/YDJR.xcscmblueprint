@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "87b02051-b741-934c-91e4-26f35a81e022++2305",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "87b02051-b741-934c-91e4-26f35a81e022++2305" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "87b02051-b741-934c-91e4-26f35a81e022++2305" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B239A795-DE94-4DCD-B0DC-3E79F1A819CE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "87b02051-b741-934c-91e4-26f35a81e022++2305" : "YDJRSecondStage\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YDJR",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/YDJR\/YDJR.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/211.103.143.163:23981\/svn\/mbfinance",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "87b02051-b741-934c-91e4-26f35a81e022++2305"
+    }
+  ]
+}

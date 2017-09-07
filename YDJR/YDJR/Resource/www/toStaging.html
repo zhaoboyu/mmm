@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申请</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="./css/common.css" rel="stylesheet"><link href="./css/vendors.css" rel="stylesheet"></head>
+<body>
+<div id="section_container" style="background: #333333;">
+    <section id="toStaging" class="active" style="margin-top: 1rem;">
+        <article id="toStaging_content" class="active">
+            <div class="index-leftpart">
+                <div class="index-logo">
+                    <span class="index-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAYAAADmBa1FAAAAAXNSR0IArs4c6QAACldJREFUeAHtmnuwVVUdx7mKgpQgQoKC+EeCOeQDNHLSGh/4bBJmCshbVoOlYdooYg/1j7QIywcOSq+ZSsOEmGl8NYqa42i8hEIbB2ECTUGk0LgiXgJE8fM97N/md39373Pv4Z5z7jne+5v5nvV7rd/6rXXWXnvttXdDjy5Mu3fvPpjufxYcCz6RlCMo9wPNYBvYDB4B8xsaGtZQdlN7RoDBHQKmgAVgByiFnsX5xPa00yV9GJzeYDJYBt4HHaHtVD6zSw5kXqcZkMHgJrAJlJOaCDYgr90uo2cQjgH3gGJLw7vYXwfrwS5QKs3oMgMaO8pIDQCzgAbR6D2YFeA28AUwEgwEDVYffn8wDJwKdAVsBG3RaqvfZUpG5EBwDdAlLWoGd4PxoH+pA0GdA8AksBrkkdb6vqXGrlt/OjsOrE1G43nKy0G/cnSIOAeDh0EeDS5HOzUdg54fAuYAzay5YEwlEiaudiza1mXRxyrRZs3EpMdjgW5i2guPqnRitHEKiPQ2inSdr3QOVY1Px/qAO8EScHo1G6e9p4CnxdVsv2pt0cMTwCLw5ao16hqi3YuApx8784eDpXcTwB/BoM7qEW2PBp4qvmRVra/0aj8wDXy1ao3mNEQOuvkavZjjVn9qetQXfAcMqYXsyUN/uh5+RN+qhZw6nAMdOQxoTdRxZU0QuRwBRDo36V0TSXUkCTqhQf50R2JUoq5yAqIrKhG/qjHphJaLmlgqYsfJqxGsAj2jra5kOtAAetVq0uT2B3DuvubXk8rfprJe6Rgt4ZXNQhNiif9wdOODfhl1ng66Honvyej1qPoR0AReBYvwf5syJeTdCDukoN5Uiv3FO9qAz31OTln8tSs5PFX06DETXx19noGu2KO52vw/WA+WU2cDZSsijmbxf7E/ZkZ0x8BfaHJS7sJnZtDtEakwHXjSiVXmTUh6sNg7w78Fhlpw+F7gCvAyyCMNwjyg93MtCJ3qZ5GOPo9s4ZwI6HVJGxX+LJlQ/NaU7Sh1ZvIEGBnbQDcctDioQtbjfxZ9JtYvyHjqDFfP7Z6+mOWMg7ZbkS4xXwzDwN+jQxF5C7axVl8l8tAi/rd4X+Px/5+r85rTP+T07WXfwbHYVaAcTy8S7C5rv1VJpZ+GisujE3YNQPxDFpgftkPBSyCLNINtDxrtm1H4K2J0dHCyrh6/zKnTWv40G42ecznpTMTTTgQNpJCXj/z/Az5qcWKJLcZVHSNt/7TUtCYMmtVbzTMp40yLs0OzMb2U4eeG+hIfBaOA3mDouFFbpIUgUjoLMJwbjUG+2vcA2+Bg9+to/OPTutTRy4IR4BLwBoh0rW/HeJzGB8c/IetFg6fzzb9VidcM7wn/pDnB66wh0jed/TiMflbJ914Qb2iagb3Aa8CTLv3CkSPlxd4Arxnv6RWENC682vZ0r8srXoGZj/JUPhxolnvKuqp1j1rpnHSlav2+3+nEpjlYLmmJcSCIs3oMuv5gI/D0eFoRBsPPvRF+G8g9FMc2NfhLHKaYGbbr0emS9zTJ2kd5ljfA357E0RUU6RyrF0sc7wjOarPFEyDy14PPnKStbwS9xrGPbyPdXbAteRPDbG+E/yHQDci/stmKnM5meFG8VP5MvDf2mDJ/V2VobZ2Of5DW3PnBX9s/o+hv7Ua9/M1mdX35ghfgDwD9TcfAHQh/o8mU74PpifwXyvcSXoXW93FOLnz65OVbEZqdQs7priLRT2MQ15kPCfSE157S0z+8kMG/k6FT4qLD9hTprwanMEtTDXtj2j0tkaP/pkSfNdBmc6FS1vfblOlERDEFHGUGSn0itlpyMkkXOZvYRi/7QFZhtnMorJtO/itBf+Nkseqo/n1Pr3shgz8oQ9eU6OIAbaLNFdieDnWuyfG3WRv/ALmbLYQqiDEnPcwUcuJP1Qy93lWS7SdOFvtAkHVTH2C6FgOdKOOsNt+sJUO29MZkjpRKrBgdH4zvIr+U6OJA2+DEWX0hHTmaOnFAzT/G2cIftjO060V95OhpHf7bEoX+VB9PS+NK7wz/YJA1+SaYrtVAE0CJ/socXPk9bK862dgWj9KJ0idlfr78khfglxJ7V6LzA9eM3jqrdXCNq6fctV2Lbdny4OOomv0B4rPogqBcKJk/cyCFXT3m8jn0az0waIOgme7pK15oxRPgMhDJ3xBb1MFxQ3Beg5w105X4+cFX4pUWEN5vyf5tepXYpsjZkfavLzpZbN/E9+agj2toGhq/icFXYuFmRnl7hq29Km15C7uptDHPYLwhRFIF3fQyCdsvg7/EmUB36pSQtdnX1s+Tto595EQZt2TL0sp77HoL7h+3fRzx280f/nfBGNdQtdcPXA1iTtor6yFrGNgOOkI/UE55gxcvuyZ3aVtffHknwmTgB/Yq5Elk+Byl1veR4JPAky61y93ykLcMFOrIj3ha1q7zQRzvl4cY61jq/hpfXWmHAtlHg8KfTGmk3c9VtKVH9B/B+6NbrfHTgC1zsK3o+2iOctpG+JudvJelgbnA0+q91mwO56wDJx8j8nqq+q6Phjw6OP3e28Vj11PcjuBnYrqtRPGsKUsodeUWljFK/THK0dMvYj5RxvkWXyHhj2t1M0wqxhntZ0qMXZCZAbNh9MTW1tZO/s+Ds6kzS4Kj2O4mZyuw1NkIMy/qE9nnGWd0TpVUrV3P54mvq1M0Hfj7jGbzDBnaoPsz7I15S8dbOK90FVY4Ppclyfn8g9rmjAdngKOBnq50Rvwm0ABrL/4MZRYpH99u3pWkrd5JGQEU30h/0jYTQqklqxlsBi+Ap8Dj5FV4aKIPH0ceDnwuD2Ffj64tWorDYtDPOR7v+G62ewS6R2DvCHC5aaukS66bKjkCDLLutv7mUcnm6i523q6jpI4wwOdRYSA3C39UWFKMSjqTXy8QD8gq2WT5Y9MBvbPTm/P0ML78rex7RPIaCvrue4QaqUkn9GmB6FM1klKaBjmdAuLePLXXDUMnDgJ66ysaVCuJk4ve7TWC+h9kDSoduRSI9HFLTayB5KGl4kpQ/8uFzVw6swoYdXrHSORr4FpQlpu89bNTSzoTD4BO7KyEyEXfdtwHJnRWDhVrl07Fb/Y6ZddBHlqLF4MTKtbZzgxMx5YAT09WMx8aPhMsBXeBeKZczVQq1xYd07fM8WMbVMU/DixHRrShJesxsB6MLUfMmo1BBweBLNIM612JxIk7BswDOpyfAw6pRDs1FZNOHgHy6GEMbX1u0K7+EEcHVXpz808gWgvGtavyh8GJzmoAipG2fROBvm0oiaijb/30EvduYC9Nm+CnAv9OsqS4detMp/8F2iK94b4RnAqOBOnpHrzWeX1YORLoY5jbwAqgl6JGO2FmgQF1O1AdTZzO/8xGo4RSLzvXAX0HoqfJPNLL13vAiI7mWff1GQTNxi2gnKRzk5vA4LofoHJ2gAEZC/Je/WNqF2kXoU8DJgP/DUU5U63/WAzOKLAclEL6cxaAKWBI/Y9C2z0o24kbA6b1dCK4AOhLID2tCXrroo8TVwF9PqDyb7yN2UrZZegDgWANrRsiNaYAAAAASUVORK5CYII=" alt=""/></span>
+                    <span class="index-icontext">达分期申请</span>
+                </div>
+                <div class="index-tabs">
+                    <ul>
+                        <li class="index-tab-list select">
+                            <div>
+                                <span class="index-tab-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAwCAYAAABnjuimAAAAAXNSR0IArs4c6QAAAl9JREFUWAntmT1LA0EQhpMzYGEiCjb5EMRKsEwCfjSCYJvGztJSRSsLQY1YWCgo0T9hZ6eigl1QktKfcIkfiJ2VJL4LbphdjriT3F08uYNjZ3fnZp97Z3cP9iKRgFxRJ858Pj/ebDa3cM+jf8zJh9sWjUYPK5XKJvc56d8nDVnmcrkC7GtATqMcku0ulLOpVGq4Xq9fdRJLAYWSowhyC8jBToIZPDOVTqdHarXapYGv4mLRGgB3cSdom1s2Ur8nYiH+KrJ2xo2rg4p0e3JhfhYJ7AoXVgEF4YQnlD9BHWBPTcfTQfW6aRxjPw1WTIOSycOegzlBaLBr2Wz2xMmPtvkGih1lkg5MYdG+DmWPab9u+wbaaDSW9MEpLHaDDSh7pPvIurKPYkMuyg63S6z4PPbQC+yhbzQ26vdoF1/IOdwzsAfQdkN9hO0bKMaKQbVFgNjJZPIZX6hPCaPBii9YP/rvZL8oxZu0LkjfbFV6b+xXq9UdieHbHJUDMspt6vuXQSlnJKbUfqkgFcpUaefu9jT6n4q6rVK7jOh9gVE0BNVT1209XPXdKqg/z1I0XPW6fA71cNU7iNJVE2uOcr71JlScOR+Y1LMU5ShgoijHJzCKhqCctJr4BkZR1mIKtyeD3LMUDbcnA0UDs5hCUINsslx0RW3W0x4645jyiYZXQNH5QDt7aeOI8pyOr4BalnUA2C/q0AtbqJlIJJSjcuUg17btGg5RP+C4AEDlJfwCFpBQs1Aul1/omAqo6MDp72MmkxG/AEdwi1+NXv1uROjW9QrAMjJaisfjy4B8b/UEzfgGA2W5W6XrxbUAAAAASUVORK5CYII=" alt=""/></span>
+                                <span class="index-tab-icon-show"><img src="./imgs/information.png" alt=""/></span>
+                                <span class="index-tab-text">基本信息</span>
+                            </div>
+                        </li>
+                        <li  class="index-tab-list">
+                            <div>
+                                <span class="index-tab-icon"><img src="./imgs/insurance_.png" alt=""/></span>
+                                 <span class="index-tab-icon-show"><img src="./imgs/insurance.png" alt=""/></span>
+                                <span class="index-tab-text">保险信息</span>
+                            </div>
+                        </li>
+                        <li  class="index-tab-list">
+                            <div>
+                                <span class="index-tab-icon"><img src="data:image/png;base64,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" alt=""/></span>
+                                <span class="index-tab-icon-show"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAwCAYAAABnjuimAAAAAXNSR0IArs4c6QAABPZJREFUWAntmVlsVFUYx5npdGpqTR9Qo01MK8aFxUyUuD2WYKKJ2vrQkjRNV15AEQNViiABBRfEJUAiJnblhYwmFEyEpIFJfOEBJdEHI2pCykN9AI3apjFkOuPvP517c3q5nXvvbFrlJGfO933nW/73O985d5klSxZJCzlxjo6OrkomkzuRr02n00ud83ny7/X29r6ap23GbB7QgYGB1lAodBSA0UKcutni92BPT89mtzk/Mhvo4ODgCgBewKjKj2E+OoA9DNhN+diGLSNAvgZdKpB7FIcYLw4NDR22YgYZbaAYrQ1iGESX+tyNfgZsKpV6IR+wNlCW5fYgwYPqOsFSaoeC+LCBsix2vQZxEETXBKsyYPMe9GtvA/VrUKieCRZfm8jsR358lgUoYJaZYEywZHYzNfuhOe9GlwUoYDqcwU2wbLCXuZgDTh2TLwtQAm4la/eagUWbYLmYrdTsfqeOxZcLaA1AEoBtpt9kBddogoV9hfm3zXmLtnc6V5O2hP/0GA6H3+zu7t5l4ihXRs2YnjQ1+7pT6V8J1AlSfMRN6CajluwycZs3ZaUoo/9eRkuRJXMVvOhFk9EbQL2WMuj8jV0fNGNe+r4z+r/Y9bzmXCNjpxk30ldHo9G6WCwW1etPJBKJcW/fAH0cneRCmfWd0YUceMhTADgKmF0dHR2XXXSvIFP/jn6EZ9K7eMrqx2aDU7dkQAn2a0VFRUtnZ2dCQePxeMXMzMxTPHA0wz5MrwNUGr1JhvOMYzwxjTPqLfWYbMxm37+9ajDIvd4MIBrfTwPgAIBWOOdMHp1v4bfwkeKsKRdd0gNfCWM59xDnSy+QAoNOjD7OhfWLN5vvjJpGuWhtDJbwiHQAuZfAO3Lp55jbziq+Y80XO6MXGxoaPpVz6uzZAkDKxT4udI0ItaICJZv7Gxsbk4lEIsKmyflWST1+XFlZuQwMFzNIrv8Rtg+42AzGYgJNVVVVnVS8iYmJJob7RC/QrnKW9nNkXeJkWPC7KSBjrMyT8lFMoF+3tbVdldPsESTS2XSuXqZvb29v/1OTXV1dJ+HjkL85lcUDVsdZaV5FcP6onJuNsuiGP8ZG+8uUi+Y4WqeRmrxNA/bPiFfjIh7RWMyMyp/V7rQIY/zdDaQxL8BXAPaVKQN0nXjfdyavGwK+DnGcvJQNYh97WV7l8BkZWw+YEUvmHJl/DGDbTDnAM76KmdF6KwC+f7FoY1RShvRnhiGzSTbN4zBnAOr8g2NSSsUE2iCHagT7Zo6a/4s8XVtbOzFfOscxdT/9Zpc5/a9QVKDLs5tBG2DMJaBEPzU1NU2JAFR4eHj4HtFq2LjuejZhxpfvGp1zl/O3kuD6vPh+TU3N8ampqUvQd5sWgLlV4KjX5Sz1W8yt4uLigNmB7R2mrmj0v6+urj4t2lz6zJVKmG/D8XoChlpbW69BX3eQM7d0dnb2Z8Yv6A9Kl74O2Q+MnzjjIuvD16zkJtBzTsWgPI4fIGN9smN3fw5Yzy/J2RgRbDO724qJ7RucIqcs3gbKxLv0gj89EnDvyMjIQwrAudkXAKyFSUu+D9vdtgDCBkoGzqKwrVCwAI2ylGNkdiW+UvjdwthCLNWsV/uRen0Om51OHPPSLS8U9xqC6dB9gn6LZHm2PwjaQmbGZc+rSHR6evp5fDcDYjWj7l5awUn489rd9fX1J/T0Jf1F2/4GXxzxcXbEaVYAAAAASUVORK5CYII=" alt=""/></span>
+                                <span class="index-tab-text">合同信息</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="index-cancel">
+                    <span class="index-cancel-icon"><img src="data:image/png;base64,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" alt=""/></span>
+                    <span class="index-cancel-text">取消申请</span>
+                </div>
+            </div>
+            <div class="index-rightpart" id="paging_index">
+                <!--三个标签页begin-->
+                    <ul>
+                        <li class="index-paging index-pagingO show">
+                            <div class="content-inner index-paging-inner">
+                                <div class="index-info-title">
+                                    <span>产品信息</span>
+                                </div>
+                                <div class="index-info-content">
+                                    <span class="index-content-key">产品名称：</span>
+                                    <span class="index-content-val">达分期</span>
+                                    <!-- <span class="index-content-key">产品代码：</span>
+                                    <span class="index-content-val">201700007689</span> -->
+                                </div>
+                                <div class="index-info-title">
+                                    <span>经办门店/车辆经销</span>
+                                </div>
+                                <div class="index-info-content">
+                                    <span class="index-content-key">经办门店：</span>
+                                    <span class="index-content-val" id="mechanismName"></span>
+                                </div>
+                                <div class="index-info-title">
+                                    <span>客户信息</span>
+                                </div>
+                                <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">客户姓名:</span>
+                                        <input class="index-inp" type="text" id="customer_name"/>
+                                        <span class="index-content-key index-form">联系电话:</span>
+                                        <input class="index-inp" type="number" id="phone_number"/>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">客户性别:</span>
+                                        <select id="select-customer-sex">   
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                         <script id="tpl-customer-sex" type="text/html" >
+                                            {{each list as value i}}
+                                                <option value="{{value.dictname}}">{{value.dictname}}</option>
+                                            {{/each}}
+                                         </script>
+                                        <span class="index-content-key index-form">客户类型:</span>
+                                        <select id="select-customertype">                                           
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                        <script id="tpl-bucusttype" type="text/html">
+                                             {{each list as value i}}
+                                                <option value="{{value.dictvalue}}">{{value.dictname}}</option>
+                                             {{/each}}
+                                        </script>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">证件类型:</span>
+                                        <select id="select-credentials-type">
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                        <script id="tpl-credentials" type="text/html">
+                                            {{each list as value i}}
+                                                <option value="{{value.dictvalue}}">{{value.dictname}}</option>
+                                            {{/each}}
+                                       </script>
+                                        <!-- <input class="index-inp" type="text" id="document_type" value="身份证"/> -->
+                                        <span class="index-content-key index-form">证件号码:</span>
+                                        <input class="index-inp" type="text" id="document_number" />
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">还款银行卡:</span>
+                                        <select id="reimbursementBank_card">
+
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                        <script id="tpl-reimbursementBank_card" type="text/html">
+                                            {{each list as value i}}
+                                                <option value="{{value.bankCardNum}}" data-bank={{value.bankCode}}>{{value.bankCardNum}}</option>
+                                            {{/each}}
+                                        </script>
+                                        <!-- <input class="index-inp" type="number" id="reimbursementBank_card" /> -->
+                                        <span class="index-content-key index-form">开户名称:</span>
+                                        <input class="index-inp" type="text" id="account_name"/>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">开户银行:</span>
+                                        <select id="account_bank">
+                                            
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                        <script id="tpl-back-list" type="text/html">
+                                             {{each list as value i}}
+                                                <option value="{{value.dictvalue}}">{{value.dictname}}</option>
+                                             {{/each}}
+                                        </script>
+                                        <span class="index-content-key index-form">开户人身份证号:</span>
+                                        <input  class="index-inp" type="text" id="accountDocument_number"/>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form" style="height:3.25rem;display:block;vetical-align:top;float:left;">联系地址:</span>
+                                        <textarea id="txt_index"></textarea>
+                                    </div>
+                                </div>
+                                <div class="index-info-title">
+                                    <span>授权信息</span>
+                                </div>
+                                <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        <!-- <span class="index-content-key index-form">融资金额:</span>
+                                        <input class="index-inp" type="text" id="financing_amount" placeholder="单位:元"/> -->
+                                        <span class="index-content-key index-form">保险融资期限:</span>
+                                        <input class="index-inp" type="number" id="financing" placeholder="单位:月"/>
+                                        <span class="index-content-key index-form">是否按揭:</span>
+                                        <select id="select-isMortgaged">
+                                            <option value="是">是</option>
+                                            <option value="否">否</option>
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                    </div>
+                                    <!-- <div class="index-info-row">
+                                        
+                                    </div> -->
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">按揭机构:</span>
+                                        <select id="select-ajjg">
+                                                
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                        <script id="tpl-ajjg" type="text/html">
+                                             {{each list as value i}}
+                                                <option value="{{value.dictname}}">{{value.dictname}}</option>
+                                             {{/each}}
+                                        </script>
+                                        <span class="index-content-key index-form">车辆按揭期限:</span>
+                                        <input class="index-inp" placeholder="单位:月" type="number" id="mortgage"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="index-paging index-pagingT">
+                            <div class="content-inner index-paging-inner">
+                                <!-- <div class="index-info-title">
+                                    <span>保险专员</span>
+                                </div>
+                                <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">员工编号:</span>
+                                        <input class="index-inp" type="text" id="employee_number" value="2323"/>
+                                    </div>
+                                </div> -->
+                                <div class="index-info-title">
+                                    <span>保险标的信息</span>
+                                </div>
+                                <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">被保险人:</span>
+                                        <input class="index-inp" type="text" id="insured" />
+                                        <span class="index-content-key index-form">保险公司名称:</span>
+                                        <select id="select-bxgsmc">
+                                            <!-- <option>三星财产保险公司上海分公司</option> -->
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                        <script id="tpl-bxgsmc" type="text/html">
+                                             {{each list as value i}}
+                                                <option value="{{value.dictname}}">{{value.dictname}}</option>
+                                             {{/each}}
+                                        </script>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">投保城市:</span>
+                                        <input class="index-inp" type="text" id="for_city" />
+                                        <span class="index-content-key index-form">车辆品牌:</span>
+                                        <input class="index-inp" type="text" id="vehicle_brand"/>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">车辆型号:</span>
+                                        <input class="index-inp" type="text" id="vehicle_type"/>
+                                        <span class="index-content-key index-form" >排量:</span>
+                                        <input class="index-inp" type="number" id="displacement" placeholder="单位:L"/>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">使用性质:</span>
+                                        <select id="select-useProperty">
+                                            <option value="非运营">非营运</option>
+                                            <option value="运营">营运</option>
+                                        </select>
+                                        <span class="icon icon-down-nav select-icon"></span>
+                                    </div>
+                                </div>
+                                <!-- <div class="index-info-title">
+                                    <span>必选项</span>
+                                </div> -->
+                                <!-- <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        
+
+                                        
+                                    </div>
+                                </div> -->
+                                <div class="index-info-title">
+                                    <span>主险</span>
+                                </div>
+                                <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="strong_risk" />
+                                        <span class="index-content-key index-content-checkbox">交强险</span>
+
+                                        <input class="index-inp-checkbox" type="checkbox" id="carLossDanger_risk" style="margin-left: 3.85rem;"/>
+                                        <span class="index-content-key index-content-checkbox">机动车损失险</span>
+                                        
+                                    </div>
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="regardlessFranchise_risk" />
+                                        <span class="index-content-key index-content-checkbox">不计免赔率险</span>
+
+                                        <input class="index-inp-checkbox" type="checkbox" id="thirdPartyLiabilityInsurance_risk" />
+                                        <span class="index-content-key index-content-checkbox" style="margin-right: 0">机动车第三者责任保险</span>
+                                        <input type="number" id="thirdPartyLiabilityInsurance_risk_txt" class="index-inp-checkbox-inp" style="width: 5rem;height: 1rem;border: none;border-bottom: 1px solid #ccc;display: inline-block;position: relative;top: 0rem;margin-bottom: 0;">
+                                        <span class="index-content-key index-content-checkbox" style="margin-right: 0">万元</span>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="wholeVehiclePilfer_risk"/>
+                                        <span class="index-content-key index-content-checkbox">机动车全车盗抢保险</span>
+                                         <label class="index-inp-label"><input name="wholeVehiclePilfer_risk" type="radio" value="国产" />国产</label>
+                                        <label class="index-inp-label"><input name="wholeVehiclePilfer_risk" type="radio" value="进口" />进口</label>
+                                        <!-- <label class="index-inp-label"><input name="wholeVehiclePilfer_risk" type="radio" value="" style="display: none;"/></label> -->
+                                    </div>
+                                </div>
+                                <div class="index-info-title">
+                                    <span>附加险</span>
+                                </div>
+                                <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="glassBroken_risk" />
+                                        <span class="index-content-key index-content-checkbox">玻璃单独破碎险</span>
+                                        
+                                        <input class="index-inp-checkbox" type="checkbox" id="naturalLoss_risk"/>
+                                        <span class="index-content-key index-content-checkbox">自燃损失险</span>
+                                        
+                                        <input class="index-inp-checkbox" type="checkbox" id="addEquipmentLoss_risk" style="margin-left: 1.95rem;"/>
+                                        <span class="index-content-key index-content-checkbox" style="margin-right: 0">新增设备损失险:</span>
+                                        <input type="number" id="addEquipmentLoss_risk-txt" class="index-inp-checkbox-inp" style="width: 5rem;height: 1rem;border: none;border-bottom: 1px solid #ccc;display: inline-block;position: relative;top: 0rem;margin-bottom: 0;">
+                                        <span class="index-content-key index-content-checkbox" style="margin-right: 0">元</span>
+                                        
+                                    </div>
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="engineWadeLoss_risk"/>
+                                        <span class="index-content-key index-content-checkbox">发动机涉水损失险</span>
+
+                                        <input class="index-inp-checkbox" type="checkbox" id="repairDuringCompensation_risk" style="margin-left: 1.35rem;"/>
+                                        <span class="index-content-key index-content-checkbox">修理期间费用补偿险</span>
+
+                                        <input class="index-inp-checkbox" type="checkbox" id="carLossNotFindThird_risk" style="margin-left: -0.5rem;"/>
+                                        <span class="index-content-key index-content-checkbox">机动车损失保险无法找到第三方特约险</span>                                     
+                                    </div>
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="goodsResponsibility_risk"/>
+                                        <span class="index-content-key index-content-checkbox">车上货物责任险</span>
+
+                                        <input class="index-inp-checkbox" type="checkbox" id="spiritLoss_risk"  style="margin-left: 1.95rem;"/>
+                                        <span class="index-content-key index-content-checkbox">精神损害抚慰责任险</span>
+                                        
+                                        <input class="index-inp-checkbox" type="checkbox" id="specifiedRepair_risk" style="margin-left: -0.5rem;"/>
+                                        <span class="index-content-key index-content-checkbox">指定修理厂险</span>
+                                        
+                                    </div>
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="scratchLoss_risk" />
+                                        <span class="index-content-key index-content-checkbox" style="margin-right: 1rem;">车身划痕损失险</span>
+                                        <label class="index-inp-label"><input name="scratchLoss_risk" type="radio" value="2000" />2000元</label>
+                                        <label class="index-inp-label"><input name="scratchLoss_risk" type="radio" value="5000" />5000元</label>
+                                        <label class="index-inp-label"><input name="scratchLoss_risk" type="radio" value="10000" />10000元</label>
+                                        <label class="index-inp-label"><input name="scratchLoss_risk" type="radio" value="20000" />20000元</label>
+                                        <!-- <label class="index-inp-label"><input name="scratchLoss_risk" type="radio" value="" style="display: none;"/></label> -->
+                                    </div>
+                                    <div class="index-info-row">
+                                        <input class="index-inp-checkbox" type="checkbox" id="personnelResponsibility_risk"/>
+                                        <span class="index-content-key index-content-checkbox" style="margin-right: 1rem;">机动车车上人员责任保险</span>
+                                        <label class="index-inp-label"><input name="personnelResponsibility_risk" type="radio" value="司机" />司机</label>
+                                        <label class="index-inp-label"><input name="personnelResponsibility_risk" type="radio" value="前排2座" />前排2座</label> 
+                                        <label class="index-inp-label"><input name="personnelResponsibility_risk" type="radio" value="所有座位" />所有座位</label>
+                                       <!--  <label class="index-inp-label"><input name="personnelResponsibility_risk" type="radio" value="" style="display: none;"/></label> -->
+                                        <label class="index-inp-label-a" for="">每座保额<input type="number" class="index-inp-checkbox-inp" id="personnelResponsibility_risk_txt" style="width: 5rem;height: 1rem;border: none;border-bottom: 1px solid #ccc;display: inline-block;position: relative;top: 0rem;margin-bottom: 0; color:#000;">元</label>
+                                    </div>
+                                </div>
+                                <div class="index-info-title">
+                                    <span>保费预估</span>
+                                </div>
+                                <div class="index-info-series">
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">保险期限:</span>
+                                        <!-- <input class="index-inp" type="number" id="insuranceTime_limit" placeholder="单位:年"/> -->
+                                        <select id="select-insuranceTime-limit">
+                                            <!-- <option value="1">1年</option>
+                                            <option value="2">2年</option>
+                                            <option value="3">3年</option>
+                                            <option value="4">4年</option> -->
+                                        </select>
+                                        <script id="tpl-insuranceTime" type="text/html">
+                                             {{each list as value i}}
+                                                <option value="{{value.dictvalue}}">{{value.dictname}}</option>
+                                             {{/each}}
+                                        </script>
+                                        <span class="index-content-key index-form">预估保险费:</span>
+                                        <input class="index-inp" type="number" id="forecasts_premium" placeholder="单位:元"/>
+                                    </div>
+                                    <div class="index-info-row">
+                                        <span class="index-content-key index-form">车船税(代收):</span>
+                                        <input class="index-inp" type="number" id="transport_risk" placeholder="单位:元"/>
+                                       <!--  <span class="index-content-key index-form">首期款支付金额:</span>
+                                        <input class="index-inp" type="text" id="down_payment"/> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="index-paging">
+                            <div class="content-inner index-paging-inner">
+                                <div class="index-info-title">
+                                    <span>借款合同</span>
+                                </div>
+                                <div class="index-info-content">
+                                    <span class="index-content-key">借款合同编号：</span>
+                                    <span id="loan_contractNo" class="index-content-val"></span>
+                                    <span class="index-content-key">合同状态：</span>
+                                    <span class="index-content-val">未确认</span>
+                                    <span>
+                                        <a class="index-contract" id="toContract_borrowing"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAAXNSR0IArs4c6QAAAypJREFUSA21Vz9rVEEQn9lnokKOQ6yMYBPQD2DsVVS0SsRC0MJeLWwSzCXCgUmUpBHUfAItLMTYRjD2xg+gYCMYK5HjAiae740z+2535927d8fdM6+4nZ2d+f32z+zOHEKfr1Knk9CCaQK6iAQnAGHcuhBsE8I3BHwHI7DerOOXPlC5Ycxp2orqAzodJ7QCROeLbDJ6xPeRwdnGQ/yU0ffo5MjP1unA1p/kCQDeBuC1DfTx3gCtTY6aex/q+Lefawa8+oiOxE16zQDngiO2eKvXjcF1imDrEMC2jO0CjGMMk0lC00AwzT4jymczquC1xhz+Crq85MnTFdOGJkbENwZxprGIX/OuQVNdoImEaJWIrgYtbk6O4qVeO+DJx2rxM3a8Y50REyS831zG1QDWX6rUaIaQHnOcmLb1853l6G6RpyW3wRXTR1617SOY2UGJHYGdACQraR8pivBMURDaGdqodsS81cMSC6H4ynGl5IQpdtrr/DWVBToVrhO25Iw7jQbtpxgcqPLxVbVvRRcQw5E65fUc1f2Cy9v2ECwGY3kTfqS8rAQjL5fry3VyctlWY2kOjWvsk9nWyD3Wg2VkjaU5NKbxbzVr3QOiDYaVM1guH3SAufvYoS7fpcO8LPfxvjtRtxJw9rkUpTyZerCMvPcbjin/H0r2opG06HryVju5bKuxNIfGNTYftzU2SejRErLG0hwaUgLurVdwdpIk4ftDChbDZro2ABcb3aBMcxE/AxcC6SCNSHbqZjiIjrPbU59iGbuoyrHRLhUIFw82IiUtSnIYhEzbjs3RC17AlVTHicVia4sgW/I069CaU0taHGYCQsxruOFwuN0oymhi4+9i2WJCtjqs2NFjHCHebCzhK6fRrScX5f8rozIUhRPIkItL+QISuBSDCxxwUZhC9x3IPa9Sc0npIxVIuAUBplCS0pl9dpbNZdlqPtE42FIUE72sztP1oFNnrpVaTosNmOr5p4HfCntllaMQCWGvHchtu/IvLfabwL6Sy+wLJrB3EHEid+all9sBINcsGwM2+G79XMLvHab715UdGKslu9LuH0sP5KPzdFwP/wPO82/H3ra+OgAAAABJRU5ErkJggg==" alt=""/>查看合同</a>
+                                    </span>
+                                </div>
+                                <div class="index-info-title">
+                                    <span>委托投保合同</span>
+                                </div>
+                                <div class="index-info-content">
+                                    <span class="index-content-key">委托合同编号：</span>
+                                    <span id="commission_contractNo" class="index-content-val"></span>
+                                    <span class="index-content-key">合同状态：</span>
+                                    <span class="index-content-val">未确认</span>
+                                    <span>
+                                        <a class="index-contract" id="toContract_entrustInsurance"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAAXNSR0IArs4c6QAAAypJREFUSA21Vz9rVEEQn9lnokKOQ6yMYBPQD2DsVVS0SsRC0MJeLWwSzCXCgUmUpBHUfAItLMTYRjD2xg+gYCMYK5HjAiae740z+2535927d8fdM6+4nZ2d+f32z+zOHEKfr1Knk9CCaQK6iAQnAGHcuhBsE8I3BHwHI7DerOOXPlC5Ycxp2orqAzodJ7QCROeLbDJ6xPeRwdnGQ/yU0ffo5MjP1unA1p/kCQDeBuC1DfTx3gCtTY6aex/q+Lefawa8+oiOxE16zQDngiO2eKvXjcF1imDrEMC2jO0CjGMMk0lC00AwzT4jymczquC1xhz+Crq85MnTFdOGJkbENwZxprGIX/OuQVNdoImEaJWIrgYtbk6O4qVeO+DJx2rxM3a8Y50REyS831zG1QDWX6rUaIaQHnOcmLb1853l6G6RpyW3wRXTR1617SOY2UGJHYGdACQraR8pivBMURDaGdqodsS81cMSC6H4ynGl5IQpdtrr/DWVBToVrhO25Iw7jQbtpxgcqPLxVbVvRRcQw5E65fUc1f2Cy9v2ECwGY3kTfqS8rAQjL5fry3VyctlWY2kOjWvsk9nWyD3Wg2VkjaU5NKbxbzVr3QOiDYaVM1guH3SAufvYoS7fpcO8LPfxvjtRtxJw9rkUpTyZerCMvPcbjin/H0r2opG06HryVju5bKuxNIfGNTYftzU2SejRErLG0hwaUgLurVdwdpIk4ftDChbDZro2ABcb3aBMcxE/AxcC6SCNSHbqZjiIjrPbU59iGbuoyrHRLhUIFw82IiUtSnIYhEzbjs3RC17AlVTHicVia4sgW/I069CaU0taHGYCQsxruOFwuN0oymhi4+9i2WJCtjqs2NFjHCHebCzhK6fRrScX5f8rozIUhRPIkItL+QISuBSDCxxwUZhC9x3IPa9Sc0npIxVIuAUBplCS0pl9dpbNZdlqPtE42FIUE72sztP1oFNnrpVaTosNmOr5p4HfCntllaMQCWGvHchtu/IvLfabwL6Sy+wLJrB3EHEid+all9sBINcsGwM2+G79XMLvHab715UdGKslu9LuH0sP5KPzdFwP/wPO82/H3ra+OgAAAABJRU5ErkJggg==" alt=""/>查看合同</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--三个标签页end-->
+                    <div class="index-steps">
+                        <input class="index-prev-step" type="button" value="上一步"/>
+                        <input class="index-next-step" type="button" value="下一步"/>
+                    </div>
+            </div>
+        </article>
+    </section>
+</div>
+<script type="text/javascript">
+    function versionNumber() {
+        var ver_num = '1.0.0';
+        return ver_num;
+    }
+</script>
+<script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/vendors.js"></script><script type="text/javascript" src="./js/application.js"></script></body>
+</html>

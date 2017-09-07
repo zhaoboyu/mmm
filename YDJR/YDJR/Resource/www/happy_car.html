@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*申请信息之开心车*/
+    body,table,tr,td,span，section，article{
+        margin: 0;
+        padding: 0;
+        font-family: MicrosoftYaHei;
+        font-size: 10px;
+    }
+    #enterprise_application div {
+        margin-bottom: 2%;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid #666666;
+    }
+    table tr {
+        width: 100%;
+        height: 22px;
+        border: 1px solid #666666;
+    }
+    table tr td{
+        border: 1px solid #666666;
+        height: 22px;
+        width: 100px;
+    }
+    #enterprise_table_header caption{
+        text-align: center;
+    }
+    table span{
+        margin-left: 3px;
+    }
+    #enterprise_table_body{
+        margin-top: 4px;
+    }
+    #eight{
+        margin-top: 4px;
+    }
+    #remark{
+        margin-top: 4px;
+    }
+    #remark tr td{
+        height: 50px;
+        line-height: 50px;
+    }
+    #eight tr td{
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #nice_qz td{
+        height: 30px;
+        line-height: 30px;
+    }
+    #nice {
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+<section id="Personal_application" class="active">
+    <article id="enterprise_table" class="active" data-scroll="true">
+        <div class="scroller">
+        <div style="width: 95%;margin: auto;margin-top: 3px" class="Count_text " >
+            <table id="enterprise_table_header">
+                <caption>
+                    <h2>上海永达融资租赁有限公司</h2>
+                    <h4>开心车申请书（个人版）</h4>
+                </caption>
+
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>基础信息</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>产品名称</span></td>
+                    <td colspan="11"><span id="BusinessType"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>客户名称</span></td>
+                    <td colspan="2"><span id="CustomerName_1"></span></td>
+                    <td colspan="1"><span>业务类型</span></td>
+                    <td colspan="2"><span id="BusinessSubType"></span></td>
+                    <td colspan="1"><span>经办门店</span></td>
+                    <td colspan="2"><span id="OperateOrgID"></span></td>
+                    <td colspan="1"><span>区域</span></td>
+                    <td colspan="2"><span id="Region"></span></td>
+
+                </tr>
+                <tr>
+                    <td colspan="1"><span>融资区域经理</span></td>
+                    <td colspan="2"><span id="RegionManager"></span></td>
+                    <td colspan="1"><span>联系方式</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>金融专员</span></td>
+                    <td colspan="2"><span id="OperateUserID"></span></td>
+                    <td colspan="1"><span>联系方式</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>销售顾问</span></td>
+                    <td colspan="2"><span id="AsUserID"></span></td>
+                    <td colspan="1"><span>联系方式</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>开票经销商</span></td>
+                    <td colspan="7"><span id="DealerInvoice"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>牌照来源</span></td>
+                    <td colspan="3"><span id="CardOrigin"></span></td>
+                    <td colspan="2"><span>租牌费用(元/月)</span></td>
+                    <td colspan="6"><span id="RentCard"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>牌照提供方</span></td>
+                    <td colspan="5"><span><input type="radio" name="people" checked/>承租人 <input type="radio" name="people"/>担保人__________</span></td>
+                    <td colspan="1"><span>牌照提供方证件号码</span></td>
+                    <td colspan="5"><span></span></td>
+                </tr>
+            </table>
+            <table id="enterprise_table_body" >
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>车辆及融资信息</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>车辆品牌</span></td>
+                    <td colspan="2"><span id="CarBrand"></span> </td>
+                    <td colspan="1"><span>车辆型号</span></td>
+                    <td colspan="5"><span id="CarModel"></span></td>
+                    <td colspan="1"><span>车辆指导价</span></td>
+                    <td colspan="2"><span id="GuidePrice"></span></td>
+
+                </tr>
+                <tr>
+                    <td colspan="1"><span>开票价</span></td>
+                    <td colspan="2"><span id="ContractAmount"></span></td>
+                    <td colspan="1"><span>融资范围</span></td>
+                    <td colspan="8"><span id="IncludeAmountType"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>融资金额</span></td>
+                    <td colspan="2"><span id="BusinessSum"></span></td>
+                    <td colspan="1"><span>融资期限</span></td>
+                    <td colspan="2"><span id="BusinessTerm"></span></td>
+                    <td colspan="1"><span>预计保费(每年)</span></td>
+                    <td colspan="2"><span id="PreInsuranceSum"></span></td>
+                    <td colspan="1"><span>保险期限(年)</span></td>
+                    <td colspan="2"><span id="UptoTerm"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>保险总金额</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>购置税</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>装潢及其他</span></td>
+                    <td colspan="5"><!--<input type="text"/>--></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>首付比例</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>首期应付款</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>留购比例</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>留购金额</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>保证金比例</span></td>
+                    <td colspan="5"></td>
+                    <td colspan="1"><span>保证金金额</span></td>
+                    <td colspan="5"><!--<input type="text"/>--></td>
+                </tr>
+
+            </table>
+            <table id="enterprise_table_three" style="margin-top: 5px">
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>还款账户信息</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>还款账户名称</span></td>
+                    <td colspan="2"><span id="AccountName"></span></td>
+                    <td colspan="1"><span>还款周期</span></td>
+                    <td colspan="2"><span id="PayFrequencyType"></span></td>
+                    <td colspan="1"><span>还款卡号</span></td>
+                    <td colspan="5"><span id="AccountNo"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>还款账户开户行</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>还款人证件类型</span></td>
+                    <td colspan="3"><span id="AccountOrgID"></span></td>
+                    <td colspan="1"><span>还款人证件号码</span></td>
+                    <td colspan="4"><span id="AccountCertID"></span></td>
+                </tr>
+            </table>
+            <div style="width: 100%;color: #666666;font-size: 8px;font-family: MicrosoftYaHei;">备注：保险费、牌照费、购置税均为预估金额，实际金额将根据发票进行确认</div>
+
+            <table id="enterprise_table_four" style="margin-top: 6px;">
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>客户基本信息</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>客户名称</span></td>
+                    <td colspan="2"><span id="CustomerName"></span></td>
+                    <td colspan="1"><span >性别</span></td>
+                    <td colspan="2"><span id="SEX"></span></td>
+                    <td colspan="1"><span>出生日期</span></td>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>证件类型</span></td>
+                    <td colspan="5"><span id="CustomerCertType"></span></td>
+                    <td colspan="1"><span>证件号码</span></td>
+                    <td colspan="5"><span id="CustomerCertID"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>婚姻状态</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>联系电话</span></td>
+                    <td colspan="2"><span id="CustomeTel"></span></td>
+                    <td colspan="1"><span>职业</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>职务</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>工作单位</span></td>
+                    <td colspan="5"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>工作地址</span></td>
+                    <td colspan="5"><!--<input type="text"/>--></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>户籍性质</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>单位固话</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>居住地址</span></td>
+                    <td colspan="5"><!--<input type="text"/>--></td>
+                </tr>
+            </table>
+            <table id="enterprise_table_five" style="margin-top:4px;">
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>担保人信息（个人客户配偶必须担保（若有））</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>与申请人关系</span></td>
+                    <td colspan="5"><span id="GuaranterRelationShip"></span></td>
+                    <td colspan="1"><span>姓名</span></td>
+                    <td colspan="5"><span id="GuaranterName"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>证件类型</span></td>
+                    <td colspan="5"><span id="GuaranterCertType"></span></td>
+                    <td colspan="1"><span>证件号码</span></td>
+                    <td colspan="5"><span id="GuaranterCertID"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>住房所有权</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>住房是否有贷款</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>工作单位</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>工作固话</span></td>
+                    <td colspan="2"><!--<input type="text"/>--></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>工作地址</span></td>
+                    <td colspan="3"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>联系地址信息</span></td>
+                    <td colspan="3"></td>
+                    <td colspan="1"><span>联系电话信息</span></td>
+                    <td colspan="3"><span id="GuatanterTel"></span></td>
+                </tr>
+            </table>
+            <div style="height: 4px;width: 100%"></div>
+            <table id="enterprise_table_six">
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>紧急联系人信息</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>姓名</span></td>
+                    <td colspan="2"><span></span></td>
+                    <td colspan="1"><span>与申请人关系</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>联系电话</span></td>
+                    <td colspan="5"><!--<input type="text"/>--></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>地址</span></td>
+                    <td colspan="11"><!--<input type="text"/>--></td>
+                </tr>
+            </table>
+            <table id="enterprise_table_seven" style="margin-top: 4px">
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>联合承租企业</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>单位名称</span></td>
+                    <td colspan="5"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>单位实际经营地址</span></td>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>单位实际经营地电话</span></td>
+                    <td colspan="3"><!--<input type="text"/>--></td>
+                    <td colspan="1"><span>联系人姓名</span></td>
+                    <td colspan="2"></td>
+                    <td colspan="1"><span>联系人电话</span></td>
+                    <td colspan="4"><!--<input type="text"/>--></td>
+                </tr>
+            </table>
+            <table id="enterprise_table_dbqy" style="margin-top: 4px;">
+                <tr>
+                    <td colspan="12" style="opacity: 0.97;background: #CBCBCB;"><span>担保企业信息</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>单位名称</span></td>
+                    <td colspan="3"><span id="CustomerName_02"></span></td>
+                    <td colspan="1"><span>单位实际经营地电话</span></td>
+                    <td colspan="2"><span id="CustomeTel1T"></span></td>
+                    <td colspan="1"><span>单位实际经营地址</span></td>
+                    <td colspan="4"><span id="CustomerAddress1T"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span>法人姓名</span></td>
+                    <td colspan="5"><span id="LegalRepresentNameT"></span></td>
+                    <td colspan="1"><span>法人电话</span></td>
+                    <td colspan="5"><span id="LegalRepresentTelT"></span></td>
+                </tr>
+            </table>
+            <table id="remark">
+                <tr>
+                    <td colspan="1"><span>备注:</span></td>
+                    <td colspan="11"></td>
+                </tr>
+            </table>
+            <div style="width: 100%;height: 4px;"></div>
+            <div style="color: #000000;margin-top: 10px;">申请人声明与授权</div>
+            <div style="color: #666666;margin-top: 6px;font-size: 8px;">1、申请人承诺提供的所有资料和信息是真实、有效的，并确认是自愿提供的。</div>
+            <div style="color: #666666;margin-top: 6px;font-size: 8px;">2、申请人同意以此申请书作为向出租人申请车辆融资租赁的依据，并愿意按照出租人的规定办理融资租赁手续；不论批准与否，此申请表格不要求发还。</div>
+            <div style="color: #666666;margin-top: 6px;font-size: 8px;">3、申请人承诺会配合出租人及出租人委派的代理公司进行的与融资有关的资信调查工作。</div>
+            <div style="color: #666666;margin-top: 6px;font-size: 8px;">4、申请人了解，出租人会搜集并保存与此融资租赁申请有关的申请人的信息和资料。申请人授权出租人严格保护和使用这些信息和资料。</div>
+            <div style="color: #666666;margin-top: 6px;font-size: 8px;">5、申请人授权出租人可以使用申请人所提供的信息和资料用于出租人的市场调研及内部报告和分析之用，并向申请人推荐其他的产品和服务。</div>
+            <div style="color: #666666;margin-top: 6px;font-size: 8px;">6、签署人同意上海永达融资租赁有限公司根据租赁申请审批和后续管理的需要，不时地向有关征信机构了解签署人的信用信息和信用评估信息等，同时授权上海永达融资租赁有限公司向征信机构提供本人的信用信息，并用于相关法律法规规章和规范性文件规定的用途。</div>
+            <div style="color: #666666;margin-top: 6px;font-size: 8px;">7、 签署人承诺其已获得其配偶（如有）的合法书面授权，代表其配偶以该配偶的名义签署本承诺与授权书，且签署人在本承诺与授权书上代表其配偶签署的效力等同签署人配偶亲笔签署。签署人配偶一经签署本承诺与授权书，有关签署人的条款无论是否提及签署人配偶，即对签署人配偶生效。</div>
+            <table id="eight">
+                <tr>
+                    <td><span>申请人签名:</span></td>
+                    <td><span>配偶签名:</span></td>
+                    <td><span>担保人签名:</span></td>
+                </tr>
+            </table>
+            <table id="nice" style="margin-top: 4px;">
+                <tr>
+                    <td colspan="3"><span>*担保人在此确认对以上申请人在该租赁项目下的所有债务承担连带保证责任</span></td>
+                </tr>
+                <tr class="nice_qz" style="height: 50px">
+                    <td><span>销售顾问:</span></td>
+                    <td><span>销售专员:</span></td>
+                    <td><span>申请日期:</span></td>
+                </tr>
+            </table>
+        </div>
+
+    </article>
+</section>
+<script>
+    window.onload = function () {
+        var obj_val = localStorage.getItem("info_obj");
+        /* console.log(eval(obj_val));*/
+        var par = JSON.parse(obj_val);
+        console.log(par);
+        //还款银行
+        if(par.OperateOrgID != undefined){
+            document.getElementById("OperateOrgID").innerHTML = par.OperateOrgID;
+        }
+        if(par.AccountCertID != undefined){
+            document.getElementById("AccountCertID").innerHTML = par.AccountCertID;
+        }
+        if(par.AccountName != undefined){
+            document.getElementById("AccountName").innerHTML = par.AccountName;
+        }
+        if(par.AccountOrgID != undefined){
+            document.getElementById("AccountOrgID").innerHTML = par.AccountOrgID;
+        }
+        if(par.AccountNo != undefined){
+            document.getElementById("AccountNo").innerHTML = par.AccountNo;
+        }
+        if(par.PayFrequencyType != undefined){
+            document.getElementById("PayFrequencyType").innerHTML = par.PayFrequencyType;
+        }
+        if(par.RegionManager != undefined){
+            document.getElementById("RegionManager").innerHTML = par.RegionManager;
+        }
+
+
+
+
+        //基础信息
+        if(par.DealerInvoice != undefined){
+            document.getElementById("DealerInvoice").innerHTML = par.DealerInvoice;
+        }
+        if(par.BusinessSubType != undefined){
+            document.getElementById("BusinessSubType").innerHTML = par.BusinessSubType;
+        }
+        if(par.Region != undefined){
+            document.getElementById("Region").innerHTML = par.Region;
+        }
+        if(par.CardOrigin != undefined){
+            document.getElementById("CardOrigin").innerHTML = par.CardOrigin;
+        }
+        if(par.RentCard != undefined){
+            document.getElementById("RentCard").innerHTML = par.RentCard;
+        }
+        if(par.OperateUserID != undefined){
+            document.getElementById("OperateUserID").innerHTML = par.OperateUserID;
+        }
+        if(par.AsUserID != undefined){
+            document.getElementById("AsUserID").innerHTML = par.AsUserID;
+        }
+        if(par.BusinessType != undefined){
+            document.getElementById("BusinessType").innerHTML = par.BusinessType;
+        }
+
+        //融资详情
+
+        if(par.CarModel != undefined){
+            document.getElementById("CarModel").innerHTML = par.CarModel;
+        }
+        if(par.CarBrand != undefined){
+            document.getElementById("CarBrand").innerHTML = par.CarBrand;
+        }
+        if(par.ContractAmount != undefined){
+            document.getElementById("ContractAmount").innerHTML = par.ContractAmount;
+        }
+        if(par.GuidePrice != undefined){
+            document.getElementById("GuidePrice").innerHTML = par.GuidePrice;
+        }
+        if(par.IncludeAmountType != undefined){
+            document.getElementById("IncludeAmountType").innerHTML = par.IncludeAmountType;
+        }
+        if(par.BusinessSum != undefined){
+            document.getElementById("BusinessSum").innerHTML = par.BusinessSum;
+        }
+        if(par.PreInsuranceSum != undefined){
+            document.getElementById("PreInsuranceSum").innerHTML = par.PreInsuranceSum;
+        }
+        if(par.BusinessTerm != undefined){
+            document.getElementById("BusinessTerm").innerHTML = par.BusinessTerm;
+        }
+        if(par.UptoTerm != undefined){
+            document.getElementById("UptoTerm").innerHTML = par.UptoTerm;
+        }
+        //个人基本信息
+        // document.getElementById("CustomerAddress").innerHTML = par.CustomerAddress;
+        if(par.CustomeTel != undefined){
+            document.getElementById("CustomeTel").innerHTML = par.CustomeTel;
+        }
+        if(par.CustomerCertID != undefined){
+            document.getElementById("CustomerCertID").innerHTML = par.CustomerCertID;
+        }
+        if(par.CustomerCertType != undefined){
+            document.getElementById("CustomerCertType").innerHTML = par.CustomerCertType;
+        }
+        if(par.SEX != undefined){
+            document.getElementById("SEX").innerHTML = par.SEX;
+        }
+        if(par.CustomerName != undefined){
+            document.getElementById("CustomerName").innerHTML = par.CustomerName;
+        }
+        if(par.CustomerName != undefined){
+            document.getElementById("CustomerName_1").innerHTML = par.CustomerName;
+        }
+
+        //担保人信息
+        if(par.GuaranterRelationShip != undefined){
+            document.getElementById("GuaranterRelationShip").innerHTML = par.GuaranterRelationShip;
+        }
+        if(par.GuaranterName != undefined){
+            document.getElementById("GuaranterName").innerHTML = par.GuaranterName;
+        }
+        if(par.GuaranterCertType != undefined){
+            document.getElementById("GuaranterCertType").innerHTML = par.GuaranterCertType;
+        }
+        if(par.GuaranterCertID != undefined){
+            document.getElementById("GuaranterCertID").innerHTML = par.GuaranterCertID;
+        }
+        if(par.GuatanterTel != undefined){
+            document.getElementById("GuatanterTel").innerHTML = par.GuatanterTel;
+        }
+    }
+</script>
+</body>
+
+
+</html>

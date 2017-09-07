@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>YDJR</title>
+    <style>
+        #page-entrustInsurance,#page-borrowing {
+            background: #fff;
+        }
+
+        article.content{
+            background: #fff;
+            width:210mm;
+            margin:0 auto;
+        }
+
+        #entrustInsurance_content table,#borrowing_content table {
+            width:90%;
+            margin:0 auto;
+        }
+
+
+        #entrustInsurance_content h1,#borrowing_content h1 {
+            text-align: center;
+            width:100%;
+            margin:0;
+        }
+
+        .contract-number label {
+            display: block;
+            text-align: right;
+        }
+
+        .special-suggestion p,.contract-parties p,.contract-parties h3 {
+            text-align:left;
+            text-indent:2em;
+            padding-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="active" id="entrustInsurance">
+        <article class="content active" id="entrustInsurance_content" data-scroll="true">
+            <div class="scroller">
+            <h1>委托投保合同</h1>
+            <div class="contract-number">
+                <label><span>合同编号:</span>[<span id="entrustInsurance_contractNo">           </span>]</label>
+                <label><span>合同签署日期:</span><span id="entrustInsurance_contractData">   年   月   日</span></label>
+            </div>
+            <div class="special-suggestion">
+                <h2>特别提示:</h2>
+                <p>在签署本合同之前, 请甲方仔细阅读并充分理解本合同的全部内容,慎重选择是否接受本合同全部条款。甲方一旦勾选或点击“我同意《委托投保合同》”选框或按钮, 即视为甲方已充分理解本合同所有条款的含义及相应的法律后果, 同意与本合同乙方以数据电文的形式订立本合同并接受本合同约束。</p>
+            </div>
+            <div class="contract-parties">
+                <h2>合同签署双方:</h2>
+                <table border="1" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>甲方（委托方)</td>
+                        <td>
+                            <div>名称:【<span id="entrustInsurance_people"></span>】</div>
+                            <div>证件号码:【<span id="entrustInsurance_userId"></span>】</div>
+                            <div>住所地:【<span id="entrustInsurance_address"></span>】</div>
+                            <div>联系方式:【<span id="entrustInsurance_phoneNum"></span>】</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>乙方（受托方）</td>
+                        <td>
+                            <div>公司名称：上海聚前金融信息服务有限公司</div>
+                            <div>住所地：上海市浦东新区东方路3601号2号楼2093室</div>
+                        </td>
+                    </tr>
+                </table>
+                <p>甲乙双方根据相关法律法规规定，经友好协商，就甲方通过乙方负责运营的点车成金平台，委托乙方以投保人名义代甲方为其所购车辆购买相关车辆保险事宜，签署本合同。</p>
+                <h3>一、委托投保内容</h3>
+                <table border="1" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>投保人</td>
+                        <td>上海聚前金融信息服务有限公司（乙方）</td>
+                    </tr>
+                    <tr>
+                        <td>保险人</td>
+                        <td id="entrustInsurance_underwriter">
+                            <div><span><input type="checkbox" disabled />中国人民财产保险股份有限公司</span><span><input type="checkbox" disabled />中国人寿财产保险股份有限公司</span></div>
+                            <div><span><input type="checkbox" disabled />中国太平洋财产保险股份有限公司</span><span><input type="checkbox"disabled />中国大地财产保险股份有限公司</span></div>
+                            <div><span><input type="checkbox" disabled />太平财产保险有限公司</span><span><input type="checkbox"disabled />三星财产保险（中国）有限公司</span></div>
+                            <div><span><input type="checkbox" disabled />众诚汽车保险股份有限公司</span><span><input id="other" type="checkbox"disabled />其他（<b id="other_company"></b>）</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>被保险人</td>
+                        <td>【<span id="entrustInsurance_peopleB"></span>】(甲方)</td>
+                    </tr>
+                    <tr>
+                        <td>保险标的</td>
+                        <td>
+                            <div><span>购车方式</span><span><input id="entrustInsurance_allYes" type="checkbox" disabled />全款购车</span><span><input id="entrustInsurance_allNo" type="checkbox" disabled />按揭购车</span></div>
+                            <div><span>车辆销售商</span>【<span id="entrustInsurance_carDealers"></span>】</div>
+                            <div><span>车辆品牌</span>【<span id="entrustInsurance_vehicleBrand"></span>】<span>车辆型号</span>【<span id="entrustInsurance_vehicleType"></span>】<span>排量</span>【<span id="entrustInsurance_displacement"></span>】</div>
+                            <div><span>使用性质</span><span><input id="entrustInsurance_useTypeYes" type="checkbox" disabled />营运</span><span><input id="entrustInsurance_useTypeNo" type="checkbox" disabled />非营运</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>投保险种</td>
+                        <td>
+                            <div><span><input id="entrustInsurance_inputOne" disabled type="checkbox"/>交强险</span><span><input disabled id="entrustInsurance_inputTwo" type="checkbox"/>机动车第三者责任保险</span>(<b id="entrustInsurance_vehicleThird"></b>万元)</div>
+                            <div><span><input disabled id="entrustInsurance_inputThree" type="checkbox"/>机动车损失险</span><span><input disabled id="entrustInsurance_inputFour" type="checkbox"/>机动车全车盗抢保险</span>(<span><input disabled id="entrustInsurance_inputFive" type="checkbox"/>国产</span><span><input disabled id="entrustInsurance_inputSix" type="checkbox"/>进口</span>)</div>
+                            <div><span><input disabled id="entrustInsurance_inputSeven" type="checkbox"/>机动车车上人员责任保险</span>(<span><input disabled id="entrustInsurance_inputEight" type="checkbox"/>司机</span><span><input disabled id="entrustInsurance_inputNine" type="checkbox"/>前排2座</span><span><input disabled id="entrustInsurance_inputTen" type="checkbox"/>所有座位</span>每座保额<b id="entrustInsurance_forehead"></b>元)</div>
+                            <div><span><input disabled id="entrustInsurance_inputEleven" type="checkbox"/>车身划痕损失险</span>(<span><input disabled id="entrustInsurance_inputTwoeve" type="checkbox"/>2000元</span><span><input disabled id="entrustInsurance_inputThirteen" type="checkbox"/>5000元</span><span><input disabled id="entrustInsurance_inputFourteen" type="checkbox"/>10000元</span><span><input disabled id="entrustInsurance_inputFiveteen" type="checkbox"/>20000元</span>)</div>
+                            <div><span><input disabled id="entrustInsurance_inputSixteen" type="checkbox"/>玻璃单独破碎险</span><span><input disabled id="entrustInsurance_inputSeventeen" type="checkbox"/>自燃损失险</span></div>
+                            <div><span><input disabled id="entrustInsurance_inputEightteen" type="checkbox"/>不计免赔率险</span><span><input disabled id="entrustInsurance_inputNineteen" type="checkbox"/>新增设备损失险</span>(<b id="entrustInsurance_newEquipment"></b>万元)</div>
+                            <div><span><input disabled id="entrustInsurance_inputTwotie" type="checkbox"/>发动机涉水损失险</span><span><input disabled id="entrustInsurance_inputTwotieOne" type="checkbox"/>机动车损失保险无法找到第三方特约险</span></div>
+                            <div><span><input disabled id="entrustInsurance_inputTwotieTwo" type="checkbox"/>修理期间费用补偿险</span><span><input disabled id="entrustInsurance_inputTwotieThree" type="checkbox"/>车上货物责任险</span></div>
+                            <div><span><input disabled id="entrustInsurance_inputTwotieFour" type="checkbox"/>精神损害抚慰金责任险</span><span><input disabled id="entrustInsurance_inputTwotieFive" type="checkbox"/>指定修理厂险</span></div>
+                            <div><span><input disabled type="checkbox"/>其他</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>保险期限</td>
+                        <td>机动车交通事故责任强制保险的保险期限为一年，其他车辆商业保险的保险期限为【<span id="entrustInsurance_Time"></span>】年，具体期限以保险人出具的保单所示期限为准。</td>
+                    </tr>
+                    <tr>
+                        <td>保险费</td>
+                        <td>预估金额：人民币【<span id="entrustInsurance_preInsuranceSum"></span>】元，最终金额以保险人出具的保单所示金额为准。</td>
+                    </tr>
+                    <tr>
+                        <td>车船税</td>
+                        <td>金额：人民币【<span id="entrustInsurance_payAblevavtAmount"></span>】元。</td>
+                    </tr>
+                </table>
+                <h3>二、委托投保条款</h3>
+                <p>1、甲方委托乙方作为投保人，代甲方为其向车辆销售商所购买的车辆购买车辆保险，购买保险的具体内容（包括但不限于保险标的、保险险种、保险期限等）以双方于本合同第一条所述为准。甲方承诺并保证，在乙方受托订立及履行相关保险合同时，将配合乙方履行合同约定的各项义务，包括但不限于如实告知义务、危险通知义务等，如非因乙方原因导致未履行上述义务的，由此发生的一切损失由甲方自行承担。</p>
+                <p>2、甲方承诺并保证，在委托乙方投保前，甲方已自行阅读了投保告知书及相关保险条款，尤其是加黑突出标注的、免除保险人责任部分的条款内容的明确说明，确认已完全知悉并理解其内容，并同意接受全部保险条款。乙方仅受甲方委托代甲方购买保险，乙方不承担保险条款的解释及说明义务，甲方确认对保险条款有任何不明之处，已从保险人处获得了充分的解释及说明。</p>
+                <p>3、甲方理解并同意，鉴于甲方委托乙方作为投保人购买保险并支付保险费，则乙方将取得由保险人开具的抬头为乙方的保险费发票，且该保险费发票将归乙方所有并留存在乙方处，甲方对此没有任何异议。</p>
+                <p>4、如甲方系按揭购车，根据甲方申请按揭的相关金融机构的要求，必须将保单的第一受益人登记为相关金融机构的，为使甲方顺利获得相关金融机构的车辆按揭贷款，甲方授权乙方在投保时向保险公司申请将该发放贷款的金融机构列为保单的第一受益人。</p>
+                <p>5、甲方理解并同意，保险期间内，甲方无权提出退保。机动车交通事故责任强制保险一经投保即无法退保。如甲方坚持退保商业保险的，须按保险条款及双方之间相关合同约定处理，并承担相应的违约责任。保险费将退还至乙方银行账户，乙方收到保险人退还的保险费后，在扣除甲方需要支付的任何费用及违约金后，将剩余费用（如有）退还给甲方，甲方对此无异议。乙方有权根据双方之间相关合同约定向保险人提出退保，退保按保险条款及双方之间相关合同约定处理，且保险费将退还至乙方银行账户。</p>
+                <p>6、甲方应根据乙方要求，提供与购买本合同约定之保险相关的一切信息和资料，如因甲方不配合提供相关信息和资料给甲方造成任何损失的，由甲方自行承担。</p>
+                <p>7、甲方应于本合同签订后，且至车辆经销商处提车前将保险费、车船税支付至乙方以下银行账户：</p>
+                <p>开户名称：上海聚前金融信息服务有限公司</p>
+                <p>开户银行：招商银行股份有限公司上海分行</p>
+                <p>账    号：121921867410301</p>
+                <p>在乙方收到本合同约定的保险费、车船税前，乙方有权不履行委托事项，由此给甲方造成的一切损失及后果由甲方自行承担。</p>
+                <p>8、保险期内，如甲方车辆发生保险事故，由甲方自行负责向保险人索赔，与乙方无关。</p>
+                <p>9、未经乙方同意，甲方不得擅自解除本合同，否则应赔偿由此给乙方造成的一切损失。任何一方在履行本合同过程中出现违约，因赔偿由此给守约方造成的一切损失。</p>
+                <p>10、甲方委托乙方投保，应自行在乙方负责运营的点车成金平台（包括PC端、APP、微信公众号）上发起申请并填写与委托投保相关的信息，因甲方信息填写错误给甲方或乙方造成的损失，全部由甲方承担。</p>
+                <p>11、甲乙双方在履行本合同过程中发生任何争议或纠纷，应协商解决，协商不成任何一方可向乙方所在地上海市浦东新区人民法院提起诉讼。</p>
+                <p>12、本合同采用数据电文的方式签订，甲方在乙方点车成金平台成功注册为用户并在乙方平台上通过点击确认或类似方式签署本合同即视为甲方真实意思表示，本合同即时成立并生效。各方不得以未签订书面合同为由否认本合同效力。</p>
+            </div>
+            </div>
+        </article>
+    </section>
+<script>
+    var changeNumMoneyToChinese = function(money) {
+        var cnNums = new Array("零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"); //汉字的数字
+        var cnIntRadice = new Array("", "拾", "佰", "仟"); //基本单位
+        var cnIntUnits = new Array("", "万", "亿", "兆"); //对应整数部分扩展单位
+        var cnDecUnits = new Array("角", "分", "毫", "厘"); //对应小数部分单位
+        var cnInteger = "整"; //整数金额时后面跟的字符
+        var cnIntLast = "元"; //整型完以后的单位
+        var maxNum = 999999999999999.9999; //最大处理的数字
+        var IntegerNum; //金额整数部分
+        var DecimalNum; //金额小数部分
+        var ChineseStr = ""; //输出的中文金额字符串
+        var parts; //分离金额后用的数组，预定义
+        if (money == "") {
+            return "";
+        }
+        money = parseFloat(money);
+        if (money >= maxNum) {
+            alert('超出最大处理数字');
+            return "";
+        }
+        if (money == 0) {
+            ChineseStr = cnNums[0] + cnIntLast + cnInteger;
+            return ChineseStr;
+        }
+        money = money.toString(); //转换为字符串
+        if (money.indexOf(".") == -1) {
+            IntegerNum = money;
+            DecimalNum = '';
+        } else {
+            parts = money.split(".");
+            IntegerNum = parts[0];
+            DecimalNum = parts[1].substr(0, 4);
+        }
+        if (parseInt(IntegerNum, 10) > 0) { //获取整型部分转换
+            var zeroCount = 0;
+            var IntLen = IntegerNum.length;
+            for (var i = 0; i < IntLen; i++) {
+                var n = IntegerNum.substr(i, 1);
+                var p = IntLen - i - 1;
+                var q = p / 4;
+                var m = p % 4;
+                if (n == "0") {
+                    zeroCount++;
+                } else {
+                    if (zeroCount > 0) {
+                        ChineseStr += cnNums[0];
+                    }
+                    zeroCount = 0; //归零
+                    ChineseStr += cnNums[parseInt(n)] + cnIntRadice[m];
+                }
+                if (m == 0 && zeroCount < 4) {
+                    ChineseStr += cnIntUnits[q];
+                }
+            }
+            ChineseStr += cnIntLast;
+            //整型部分处理完毕
+        }
+        if (DecimalNum != '') { //小数部分
+            var decLen = DecimalNum.length;
+            for (var i = 0; i < decLen; i++) {
+                var n = DecimalNum.substr(i, 1);
+                if (n != '0') {
+                    ChineseStr += cnNums[Number(n)] + cnDecUnits[i];
+                }
+            }
+        }
+        if (ChineseStr == '') {
+            ChineseStr += cnNums[0] + cnIntLast + cnInteger;
+        } else if (DecimalNum == '') {
+            ChineseStr += cnInteger;
+        }
+        return ChineseStr;
+
+    }
+    window.onload = function () {
+        var YDJR_sendJson = localStorage.getItem("info_obj");
+        var insuranceContractNo = localStorage.getItem("insuranceContractNo");
+        var par = JSON.parse(YDJR_sendJson);
+        if(par.creditInfo.isMortgaged == '否'){
+            document.getElementById('entrustInsurance_allYes').checked = true;
+        }else if (par.creditInfo.isMortgaged == '是'){
+            document.getElementById('entrustInsurance_allNo').checked = true;
+        }
+        if(par.operateOrgName != undefined){
+            document.getElementById('entrustInsurance_carDealers').innerHTML = par.operateOrgName;
+            }
+        if(par.carInfo.carBrand != undefined){
+            document.getElementById('entrustInsurance_vehicleBrand').innerHTML = par.carInfo.carBrand;
+        }
+        if(par.carInfo.carModel != undefined){
+            document.getElementById('entrustInsurance_vehicleType').innerHTML = par.carInfo.carModel;
+        }
+        if(par.carInfo.displacement != undefined){
+            document.getElementById('entrustInsurance_displacement').innerHTML = par.carInfo.displacement;
+        }
+        if(par.carInfo.useProperty == '运营'){
+            document.getElementById('entrustInsurance_useTypeYes').checked = true;
+        }else if (par.carInfo.useProperty == '非运营'){
+            document.getElementById('entrustInsurance_useTypeNo').checked = true;
+        }
+        var thirdPartyLiabilityInsurance_risk_txt = localStorage.getItem('thirdPartyLiabilityInsurance_risk_txt');
+        var WaddEquipmentLoss_risk_txt = localStorage.getItem('WaddEquipmentLoss_risk_txt');
+        var scratchLoss_risk = localStorage.getItem('scratchLoss_risk');
+        var personnelResponsibility_risk_a = localStorage.getItem('personnelResponsibility_risk_a');
+        var personnelResponsibility_risk_b = localStorage.getItem('personnelResponsibility_risk_b');
+        var wholeVehiclePilfer_risk = localStorage.getItem('wholeVehiclePilfer_risk');
+
+
+        var carLossInsFlag = fenGeJingHao(par.insuranceTypeInfo.carLossInsFlag);
+        var thirdDutyFlag = fenGeJingHao(par.insuranceTypeInfo.thirdDutyFlag);
+        var carRobberyFlag = fenGeJingHao(par.insuranceTypeInfo.carRobberyFlag);
+        var glassBreakFlag = fenGeJingHao(par.insuranceTypeInfo.glassBreakFlag);
+        var carPersonSum = fenGeJingHao(par.insuranceTypeInfo.carPersonSum);
+        var carBodyLossSum = fenGeJingHao(par.insuranceTypeInfo.carBodyLossSum);
+        var selfIgniteFlag = fenGeJingHao(par.insuranceTypeInfo.selfIgniteFlag);
+        var nofreerFlag = fenGeJingHao(par.insuranceTypeInfo.nofreerFlag);
+        var addEquipmentLoss = fenGeJingHao(par.insuranceTypeInfo.addEquipmentLoss);
+        var engineWadingLoss = fenGeJingHao(par.insuranceTypeInfo.engineWadingLoss);
+        var canNotFindThirdPartySpecial = fenGeJingHao(par.insuranceTypeInfo.canNotFindThirdPartySpecial);
+        var costCompenSation = fenGeJingHao(par.insuranceTypeInfo.costCompenSation);
+        var carGoresPonsibility = fenGeJingHao(par.insuranceTypeInfo.carGoresPonsibility);
+        var mentalinjury = fenGeJingHao(par.insuranceTypeInfo.mentalinjury);
+        var designatedRepairShop = fenGeJingHao(par.insuranceTypeInfo.designatedRepairShop);
+        var eforceInsurance = fenGeJingHao(par.insuranceTypeInfo.eforceInsurance);
+        //赋值input选中保险
+        if (eforceInsurance == "是"){
+            document.getElementById('entrustInsurance_inputOne').checked = true;
+        }
+        if (thirdDutyFlag[0] == "是"){
+            document.getElementById('entrustInsurance_inputTwo').checked = true;
+        }
+        if (carLossInsFlag == "是"){
+            document.getElementById('entrustInsurance_inputThree').checked = true;
+        }
+        if (carRobberyFlag[0] == "是"){
+            document.getElementById('entrustInsurance_inputFour').checked = true;
+        }
+        if (carRobberyFlag[1] && carRobberyFlag[1] == "国产"){
+            document.getElementById('entrustInsurance_inputFive').checked = true;
+        }else if(carRobberyFlag[1] && carRobberyFlag[1] == "进口"){
+            document.getElementById('entrustInsurance_inputSix').checked = true;
+        }
+        if (carPersonSum[0] == "是"){
+            document.getElementById('entrustInsurance_inputSeven').checked = true;
+        }
+        if (carPersonSum[1] && carPersonSum[1] == "司机"){
+            document.getElementById('entrustInsurance_inputEight').checked = true;
+        }else if(carPersonSum[1] && carPersonSum[1] == "前排2座"){
+            document.getElementById('entrustInsurance_inputNine').checked = true;
+        }else if(carPersonSum[1] && carPersonSum[1] == "所有座位"){
+            document.getElementById('entrustInsurance_inputTen').checked = true;
+        }
+        if (carBodyLossSum[0] == "是"){
+            document.getElementById('entrustInsurance_inputEleven').checked = true;
+        }
+        if (carBodyLossSum[1] && carBodyLossSum[1] == "2000"){
+            document.getElementById('entrustInsurance_inputTwoeve').checked = true;
+        }else if(carBodyLossSum[1] && carBodyLossSum[1] == "5000"){
+            document.getElementById('entrustInsurance_inputThirteen').checked = true;
+        }else if(carBodyLossSum[1] && carBodyLossSum[1] == "10000"){
+            document.getElementById('entrustInsurance_inputFourteen').checked = true;
+        }else if(carBodyLossSum[1] && carBodyLossSum[1] == "20000"){
+            document.getElementById('entrustInsurance_inputFiveteen').checked = true;
+        }
+        if (glassBreakFlag == "是"){
+            document.getElementById('entrustInsurance_inputSixteen').checked = true;
+        }
+        if (selfIgniteFlag == "是"){
+            document.getElementById('entrustInsurance_inputSeventeen').checked = true;
+        }
+        if (nofreerFlag == "是"){
+            document.getElementById('entrustInsurance_inputEightteen').checked = true;
+        }
+        if (addEquipmentLoss[0] == "是"){
+            document.getElementById('entrustInsurance_inputNineteen').checked = true;
+        }
+        if (engineWadingLoss == "是"){
+            document.getElementById('entrustInsurance_inputTwotie').checked = true;
+        }
+        if (canNotFindThirdPartySpecial == "是"){
+            document.getElementById('entrustInsurance_inputTwotieOne').checked = true;
+        }
+        if (costCompenSation == "是"){
+            document.getElementById('entrustInsurance_inputTwotieTwo').checked = true;
+        }
+        if (carGoresPonsibility == "是"){
+            document.getElementById('entrustInsurance_inputTwotieThree').checked = true;
+        }
+        if (mentalinjury == "是"){
+            document.getElementById('entrustInsurance_inputTwotieFour').checked = true;
+        }
+        if (designatedRepairShop == "是"){
+            document.getElementById('entrustInsurance_inputTwotieFive').checked = true;
+        }
+
+
+        if(thirdPartyLiabilityInsurance_risk_txt != undefined){
+            document.getElementById('entrustInsurance_vehicleThird').innerHTML = thirdPartyLiabilityInsurance_risk_txt;
+        }
+        if(WaddEquipmentLoss_risk_txt != undefined){
+            document.getElementById('entrustInsurance_newEquipment').innerHTML = WaddEquipmentLoss_risk_txt;
+        }
+        if(personnelResponsibility_risk_b != undefined){
+            document.getElementById('entrustInsurance_forehead').innerHTML = personnelResponsibility_risk_b;
+        }
+
+
+
+        if(par.insuranceInfo.uptoTerm != undefined){
+            document.getElementById('entrustInsurance_Time').innerHTML = par.insuranceInfo.uptoTerm;
+        }
+        if(par.insuranceInfo.preInsuranceSum != undefined){
+            document.getElementById('entrustInsurance_preInsuranceSum').innerHTML = par.insuranceInfo.preInsuranceSum;
+        }
+        if(par.insuranceInfo.payAblevavtAmount != undefined){
+            document.getElementById('entrustInsurance_payAblevavtAmount').innerHTML = par.insuranceInfo.payAblevavtAmount;
+        }
+        document.getElementById("entrustInsurance_contractNo").innerHTML = insuranceContractNo;
+        var data = new Date();
+        document.getElementById("entrustInsurance_contractData").innerHTML = (data.getFullYear() + '年' + (data.getMonth() + 1) + '月' + data.getDate() + '日');
+        if(par.userInfo.customerName != undefined){
+            document.getElementById("entrustInsurance_people").innerHTML = par.userInfo.customerName;
+            document.getElementById("entrustInsurance_peopleB").innerHTML = par.userInfo.customerName;
+        }
+        if(par.userInfo.idsNumber != undefined){
+            document.getElementById("entrustInsurance_userId").innerHTML = par.userInfo.idsNumber;
+        }
+        if(par.userInfo.address != undefined){
+            document.getElementById("entrustInsurance_address").innerHTML = par.userInfo.address;
+        }
+        if(par.userInfo.customerPhone != undefined){
+            document.getElementById("entrustInsurance_phoneNum").innerHTML = par.userInfo.customerPhone;
+        }
+        var _entrustInsurance_underwriter = document.getElementById('entrustInsurance_underwriter').querySelectorAll('div');
+        var insuranceOrg = par.insuranceInfo.insuranceOrg;
+        for(var i = 0; i<_entrustInsurance_underwriter.length; i++){
+            var _entrustInsurance_underwriterSpan = _entrustInsurance_underwriter[i].childNodes;
+            for(var k = 0; k<_entrustInsurance_underwriterSpan.length; k++){
+                var _entrustInsurance_underwriterSpanTex = _entrustInsurance_underwriterSpan[k].innerText;
+                if(_entrustInsurance_underwriterSpanTex == insuranceOrg){
+                    _entrustInsurance_underwriterSpan[k].getElementsByTagName('input')[0].checked = true;
+                    document.getElementById("other").checked = false;
+                    document.getElementById("other_company").innerText = "";
+                    return;
+                }else{
+                    document.getElementById("other").checked = true;
+                    document.getElementById("other_company").innerText = insuranceOrg;
+
+                }
+            }
+        }
+
+
+        function fenGeJingHao(index){
+            if(index.indexOf('#') > -1){
+                return index.split('#');
+            }else{
+                return index;
+            }
+        }
+
+
+
+
+    }
+</script>
+
+</body>
+</html>

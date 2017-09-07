@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申请</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="./css/common.css" rel="stylesheet"><link href="./css/vendors.css" rel="stylesheet"></head>
+<body>
+<div id="section_container">
+    <section id="index" class="active">
+        <header class="bar bar-nav">
+            <a class="pull-left">取消申请</a>
+            <h1 class="title">客户申请</h1>
+        </header>
+        <article id="authorization_validation_content" class="active">
+            <div id="progress_bar" class="progress_bar">
+                <ul class="progress_bar_img">
+                    <li>
+                        <p class="have_text">1</p>
+                        <span class="have_text">征信授权验证</span>
+                    </li>
+                    <li class="progress_line"></li>
+                    <li>
+                        <p>2</p>
+                        <span>金融产品</span>
+                    </li>
+                    <li class="progress_line"></li>
+                    <li>
+                        <p>3</p>
+                        <span>申请信息</span>
+                    </li>
+                    <li class="progress_line"></li>
+                    <li>
+                        <p>4</p>
+                        <span>拍照材料</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="authorization_validation_contentC">
+                <div class="box_contentC">
+                    <h3>征信授权书</h3>
+                    <div>
+                        <div data-checkbox="checked">我已认真阅读<span class="hight-font">《征信授权书》</span>，同意并授权永达金融征信查询。</div>
+                    </div>
+                </div>
+                <div class="box_contentC">
+                    <p>诚信授权验证（为提高系统安全控制，并确认此次授权是您本人在现场亲自同意授权）</p>
+                    <div style="padding: 1.2rem 0.8rem;">
+                        <ul>
+                            <li>
+                                <input type="number" id="phone_num" placeholder="请输入手机号码" readonly/>
+                                <span class="GetInfo_mation">获取短信<div class="set_num" style="display: none;width: 15px;"></div>验证码</span>
+                            </li>
+                            <li><input type="number" id="phone_Code"  placeholder="请输入验证码"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <!--href="views/financial_products.html"-->
+            <!--<div class="btn-agreement btn-agreement-yzm"><a>通过验证</a></div>-->
+            <div class="btn-agreement-yzm"><a href="views/financial_products.html" data-target="section">通过验证</a></div>
+            <!--<div class="btn-agreement-yzm"><a href="views/application_information.html" data-target="section">通过验证</a></div>-->
+        </footer>
+    </section>
+</div>
+<script type="text/javascript">
+    function versionNumber() {
+        var ver_num = '1.0.0';
+        return ver_num;
+    }
+</script>
+<script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/vendors.js"></script><script type="text/javascript" src="./js/index.js"></script></body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申请</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="./css/common.css" rel="stylesheet"><link href="./css/vendors.css" rel="stylesheet"></head>
+<body>
+<div id="section_container">
+    <section data-dom-cache="true" id="application_informationT" class="active">
+        <article id="application_information_contentT" class="active">
+            <div class="application_information_contentC" id="information_templateT">
+                <div class="note_information">备注：保险费、牌照费、购置税均为预估金额，实际金额将根据发票进行确认</div>
+                <div class="whiteBG" style="height: 29rem;"><div><img style="float:left;" src="data:image/gif;base64,R0lGODlhggCMALIAAP///93d3ZmZmbu7uwAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFDQAEACwAAAAAggCMAAAD/0i63P4wykmrvTjrzbv/YCiOZGmeaKqubOu+cCzPdG17QA7cvKnrvSDo9xMaN0TgcWlJ5pjQiXMXrTqm1uwCq00FvoEPtyMoC7oNMBjn9JjNaIVa3Rlr3u/4fM2xZ/BwaHt8Gn4XgIFdg4QYhhWIiYqLSG13kHELi2EZjhOQZ5hyk5yVGJ+hmaMXnRGnqKKqFawPn6CvBJqNpY+Xt7CDq7uerr64sVLCEsTFxsCyyRDLzLnPSRbS08cQswvY2dpX0A21zA/UEtwE3uWamxHc5OXm4A3Ww4hLA/oDIefvSsp6fcgDYt8+EP5ArDOF54PBhx/ocRA4kaKGhxg7SNxgkf/hwgoYQ3LYYwJQxVq2NoQUuYHOCYKWUKZUuTKjPHUyy4SoydJXzkgFeUJE9VOnCaFD4xSdWQKpwS5LXTg9GCUqjKn6oFiVgXVJUR5Ovco0IlTsxxo8zeKL0vPI2ixPqwK9Sbeu3bt48+rdy7ev37+AAwumsDReqMILERtGo9hb48VZHmOT3LEK5bfdLjdkrBlm5s5GoYIOzWD0YdCtNL/qPLi169ewY8ueTbu27du46XpWK3qz2rlGIPcQPpz4DZTBx7pVbuPr8pw0tj6HDkP6b+QtrMv9qUJ7ZOclvGsRf5K6T/BuuN9Ez9H8H+Ahdh9yH9M4Yd8jTLbHXh7ze/3hIlR2jX28+FeffOkB2B+CHsHXIH4KCfggU/tReCCDpTn4mYJkaBidhBuSFg2IxRCIE4cOmHjLWSdCSAuJq7EIo4qnGfgiijfieJ6NOWI4DoxKAdmijxnySJSQQ3pYpI6Y0KgAkk5ahmSSIt7DZG9G9qjkkld+l6WWVVrpImdfgmlhQGVqNeWTaf7Y5nRj3tfliG8GESWXW6bIYnJ14hlmgXPyGSegRKI5KBNr+nmmnIci2qiYedIZqaAD9annn38lmpumuHF6m6e2gVqbqKM+mltqmJ6q6qqsturqq7DGGmsCACH5BAUNAAQALAsACABXADAAAAP/SLrc/jC+QIO8OOs9K+VgKEqeN54oV1Zp63brK7/rN99nbeE8qPejgXCQ+qEASEBrOEQZR8kkisnM1U7R6InaHD1DWWmQK/ReRWGxiNz1nUFp9Zot+m7iyhSb6I7B4y57IXYZeC+CKm8ahoeIGoQSeHmNZIl+i4Aze3wZkBCSOI4Yng+MoXSdipGZPKIkqhGmragXpAyys7QRtgqgQAquMCUYuD2btbANvr/AuhCXsawQAtQCgc7CxNIP1dVL2EfbDd3kepUy4uPk5WNcM+kM6/LtbehZGPLzc2U8Whn5+pgJBBhQ4C+C6wwyQ8hOIRCG3RwehEhNYg+KFS3ywKjxEyLDjg8JggyZb+TEhiZJWkupIQEAIfkEBQ0ABAAsIAAIAFcAMAAAA/9Iutz+a8gBq7046zbn/mCodZ1oniLpoWxbqZIrzwRM0fhp53y49yKBUMD6nQLIQGs4RBlFySSKydTBjlGpido0PUFZbZAr9F6hYeSJ3AV9NWnxmJw6g+NLts++iSvzdG58cHgubEQfbxd+M4eII4OLjI16G4oVk5SVGZcPfn80h5aRmIU5opyknqanmxedDZk8qK+qsayztC+2C59AC7oQsAqyQI61KpK4xq7CJBjFvwTBDyXKYS4A2gAY1CjRIdvb3YEyyyDi6RfNLOca6fDkVTjYIvD3GfM5USb3+NLS/P0D2EPgQII4DMZDyEOhOoYJHY6DSEPiRIozLGrDWNEUIseICj/mCClypMCSBReiTLnRRAIAIfkEBQ0ABAAsPQAIAEIAQgAAA/9IJCz6MMpJq52t3c17zZknjhaokWhqMmk7ro4rb/Bsf+utR7U7/IPdo5cCAoWLXNF43BFJzKbuKYpKb9SO9WrLcrZBofcCRiZN0K15XCmvlVo3kj2Rz+EbcPiNjlvNQ3gWdnwgflGAgX1kaokKdAp6jo+CdY2TkJKTlCGMf5uKMYOXLgGmATuEKKenOqSrrKw3ryKxtq5MKba7qVweu7ygG8DBwhXExcYSyLfKFMyxzhPQstIR1K3W19io2hDc3svQ4dPI5M/E58fN6uum7fDx8vP09fb3+Pn6+gD9/v8AAwI0JrCgwX+gDio0uGmhw4GTHkoE0HCiw4QWDxLMKFACQQIAIfkEBQ0ABAAsTwAQADAAVwAAA+xIurzyoslJK4XQ6n1x5uDmfWEpjaSpoqlaspG7srIL1+aNh3C8c7qfKCi0EIsdFHKoXFaOTkYvmhxRJ9NrA3rlqgbggZG2C4efzZp5XcWo1+y2zwSvjx+yup2q3zv7fkiAcHyDZlGGh3+JYIWMjoZaiVoKg5QLgJcMgZqVZ52goaKjpKWmp6ipqioBra6vsLGwNbK1tq8ut7q2rLu+uCa/wgG9w7u5xre0ybKrzs/Q0dLT1NUyANgApdncotzf2p3g3+Lj5JTm4+jp4Frs7e7v3fHy2PT16/XhV/r7/Pj52JVLF4qgt3Oj5lFIAAAh+QQFDQAEACxPACUAMABXAAAD6Ui63P5OSAGrvW1OzDvRoCdGYDiOZXqKqbpirftWsTyTtXbTub7jPcovE5QMgb0jMahEtpqPHBRSm/JM1qswy+16v+CweEwum8/cgXrNbrvbs7d8zl7R7/MTfg8f8f8DeoB7doN0cYZvaIuMjY6PkJGSkwoBlgFml5pjmp2YYJ6doKGiXaShpqeeXKqrrK2br7CWsrOps59ZuLkQAL4AL7gVv7/BsL3ExcanyMnAN8wPzsrQpdLTzzuxw9hi2L7e3WHf2V/fY+fj4urT4evm717k7s7o8V3p7PX6+2D5/u3oESPTzx64KQkAACH5BAUNAAQALD0AQgBCAEIAAAP5SLrc/lCJSau9Nuodsf8VJ3Jg+Y3oY65Z6kps/L6xPLu1ec/5uf/AoHBILBqPyKRyyWw6n9CodEoYWAfU13WbHW2/2K4G/BVHyGCzA01WM9htdxVels/pV/sdH3bz83Z/VnqCRgGHATd/RIiIinhDjY07dJGSh0BslpeJmXURAKEAHJyYQVwaoqKkpU+qqhulpkyvq7GtTbWhrLhLuqO8l7m6I7K0xCLGvsjJvUi/KLKdz8zNnErQ0cpH2drX1LUv20Xd3sLc1eaS6OHi40LlKe9B8fLfRPXqjuTpLuf87XZMYvdKj4N8dhDKUeiGoRqHDwsafABrYoMEACH5BAUNAAQALCAAVABXADAAAAP/SLrc/jDKJ6qYOOvNif1dKI7NZ15kqkqnub6w17pxHc6trWt4vv+Q3glIdAhpxeQRlCwuLU3lExUFTjWALOA36A5GT4xWq/N6wcfJeFwzm0lC9TrbdndVOMmcHLOf8UgQe3QTAYYBGH53K0wRg1uFh4aJilGPkBGSkhOKi0WPGJqHlH5Jl6GiiJydn4MZqaqrpUCgr6karD+1qKK4lTu7vJobuTWnGrDExTDBwpvKs8zNkb3Q0SvT1MMcyynZ2s/cvyrfEskd3SLl5rch6RzHHefo71iuIvP01x33+O0i40L0C5FPnxtva1IUNOiJBBuF/0a8qeJsFMUoCy/+yKhREwfHjjU+goQhcuSLaiaJhEupIAEAIfkEBQ0ABAAsCwBUAFcAMAAAA/9IutwOELhJq704t8i1/+DHjVJoniE5omxLqaQrt7A632Bt4zymx73g5LcSGhfEznGZjCyPTcgT2pxSiaeANiAUeAWZZHar7X2/Ph2KTMadz5dai711v71pJYtev93RcU4ufGUXA4cDGH94VgSEXIaIh4qLVo+QFZKSF4uMS48YmoiUf0+XoaKJnJ2fhBmpqqulRqCvqRqsQrWooriVQbu8mh65OKcasMTFM8HCm8qzzM2RvdDRg64fyR/Le9natyDdY3wh29y/3uXm4eLpJscg5+jvINPI7e7X9usm8/pv1vRjV81EPX5tUPwD6ElgIYX5DAJqRG0YRSsLLwrJqLESB8eOOD6CnCFypIyCJo0845EAACH5BAUNAAQALAMAQgBCAEIAAAP1SATc/vCpSau9mMbNXf7g1Y1caIJkKp2spb5AK0+wOt/1eO/5tv/AoHBILBqPyKRyyWw6n9CodEo9Ba6BqgzL1Zq44Kw3EwaPL+XwmZIurwlt9zquPtPN9jv2rd/n+3yAgXc7A4YDRnqFh4ZFdD+MjERtQZGHjnhAlpeYV0ObjSACowJSoIiipKNQp6gZqqpPpyGwpE6ttLWlTbO5tbygJ7q7S72+sEzGx7FKuMK6xcEsw83Ky7ZJ1terSNrbxEbeqb9H4uPI4eYf1OmbO+xF0jfwRPIz9PWRQPj5oT/8byYADEhgYECDbxCuUXiGYUN0BDEwSwAAIfkEBQ0ABAAsAwAlADAAVwAAA+dIugwOLMpJa3vO6k2x5+DmjWEpjaipoqlasq3LwbGs0aR945gu8g/fDggRdohF4wSprACbFhw0CpsOe9ZfJsvter/gsHhMLpvPoYB6zW6727a3fM520e9zFX4PN/H/AXqAe3aDdHGGb2iLjI2Oj5CRkpNoA5YDZpeaY5qdmGCenV+hnl2koVmnqFaqpVOtoq+wl6mzlqy2n7KzXLYyAsACFrwuwcEVrTbGxhSnPsvHzbE60NHSt0LVwGLawmHd3mDd3OPf2uTVY+Xi5+bt7Onu8fDQ6PX2y/jM8vf0+frb1M3Td2afhgQAIfkEBQ0ABAAsAwAQADAAVwAAA+tIutz+C0gAq71tTsy70ponVuA2nkxpoqe6sqJLwa1Lj/KN23onzz1MLigcEi3GI4mnhCSbjic0Ip0SqtOfNcqEBL6BHpYABuuw5fSty0i7YeyFe84qVeZ0VMiCz0/7flCAb3+DZVuGh1aJZoWMiI+Qg1tygJSVeJdthJqbX52goaKjpKWmp6ipOgOsra6vsK8wsbS1rii2ubUnur2yI77BA7zCvbjFtrPIsarNzs/Q0dLT1M8C1wKj2Nug297Zl9/elOLfVuXiUOjpTevmSu7j8PHY6vTX7ffg8/RT91v9AK7ThC7UO1HcrCQAADs="/><span style="float: right;color: #21456E;font-size: 1rem;margin: 0.9rem 2rem;">正在加载...</span></div></div>
+                <div class="loading_BG"><img src="data:image/gif;base64,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"/></div>
+                <div class="infomation_content" id="commScroll_scrollerT" data-scroll="true" style="height: 660px;">
+                    <div class="scroller">
+                        <div class="content_introduction">
+                            {{each applys as value i}}
+                            <span>{{value.applyTabName}}</span>
+                            <ul>
+                                {{each value.details as value1 k}}
+                                <li sys={{value1.applyName}}>
+                                    <p class="titles">{{value1.applyDesc}}</p>
+                                    {{if value1.applyCategory == 'inp'}}
+                                    {{if value1.applyValue == ''}}
+                                    {{if value1.applyDefaultName == ''}}
+                                    <input class={{value1.applyName}} data-losing={{value1.islosing}} id={{value1.applyName}} type="text" placeholder='请输入' readonly />
+                                    {{else}}
+                                    <input type="text" class={{value1.applyName}} data-losing={{value1.islosing}} data-v={{value1.applyDefaultName}}  value={{value1.applyDefaultName}} readonly />
+                                    {{/if}}
+
+                                    {{else}}
+                                    {{if value1.applyValueName == ''}}
+                                    <input type="text" class={{value1.applyName}} data-losing={{value1.islosing}} data-v={{value1.applyValue}}  value={{value1.applyValue}} readonly />
+                                    {{else}}
+                                    <input type="text" class={{value1.applyName}} data-losing={{value1.islosing}} data-v={{value1.applyValueName}}  value={{value1.applyValueName}} readonly />
+                                    {{/if}}
+                                    {{/if}}
+                                    <!--<input type="text" class={{value1.applyName}} value="" />-->
+                                    {{else if value1.applyCategory == 'sel'}}
+                                    {{if value1.applyDefaultValue }}
+                                    <select data-id={{value1.applyName}} data-losing={{value1.islosing}} class={{value1.applyName}} disabled >
+                                        {{each value1.applyValue.idsCategory as item l}}
+                                        {{each item.dicts as selValueC j}}
+                                        {{if selValueC.dictvalue == value1.applyDefaultValue }}
+                                        <option data-ser-id={{selValueC.dictvalue}} selected>{{selValueC.dictname}}</option>
+                                        {{else}}
+                                        <option data-ser-id={{selValueC.dictvalue}} >{{selValueC.dictname}}</option>
+                                        {{/if}}
+                                        {{/each}}
+                                        {{/each}}
+                                    </select>
+                                    {{else}}
+                                    <select data-id={{value1.applyName}} data-losing={{value1.islosing}} disabled >
+                                        {{each value1.applyValue.idsCategory as item l}}
+                                        {{each item.dicts as selValueC j}}
+                                        {{if value1.islosing=='0' }}
+                                        <option selected="false" data-ser-id={{selValueC.dictvalue}}>{{selValueC.dictname}}</option>
+                                        {{else}}
+                                        <option data-ser-id={{selValueC.dictvalue}}>{{selValueC.dictname}}</option>
+                                        {{/if}}
+                                        {{/each}}
+                                        {{/each}}
+                                    </select>
+                                    {{/if}}
+                                    {{else if value1.applyCategory == 'fuz'}}
+                                    {{if value1.applyDefaultValue }}
+                                    <input type="text" name={{value1.applyName}}sel id={{value1.applyName}} class="fuzzySearchInp fuzzy_blur" placeholder="请选择或输入" data-val={{value1.applyDefaultValue}} value={{value1.applyDefaultValue}} >
+                                    <select class="fuzzy_sel fuzzy_blur" data-id={{value1.applyName}} data-losing={{value1.islosing}} size="20" style="display: none;">
+                                        <!--<select data-id={{value1.applyName}} data-losing={{value1.islosing}}>-->
+                                        {{each value1.applyValue.idsCategory as item l}}
+                                        {{each item.dicts as selValueC j}}
+                                        {{if selValueC.dictvalue == value1.applyDefaultValue }}
+                                        <option data-ser-id={{selValueC.dictvalue}} data-ser-name={{selValueC.dictname}} data-code-id={{selValueC.dictcode}} selected>{{selValueC.dictname}}</option>
+                                        {{else}}
+                                        <option data-ser-id={{selValueC.dictvalue}} data-ser-name={{selValueC.dictname}} data-code-id={{selValueC.dictcode}}>{{selValueC.dictname}}</option>
+                                        {{/if}}
+
+                                        {{/each}}
+                                        {{/each}}
+                                    </select>
+
+                                    {{else}}
+                                    <input type="text" name={{value1.applyName}}sel id={{value1.applyName}} class="fuzzySearchInp fuzzy_blur" placeholder="请选择或输入"  >
+                                    <select class="fuzzy_sel fuzzy_blur" data-id={{value1.applyName}} data-losing={{value1.islosing}} size="20" style="display: none;">
+                                        <!--<select data-id={{value1.applyName}} data-losing={{value1.islosing}}>-->
+                                        {{each value1.applyValue.idsCategory as item l}}
+                                        {{each item.dicts as selValueC j}}
+                                        {{if value1.islosing=='0' }}
+                                        <option data-ser-id={{selValueC.dictvalue}} selected="false" data-ser-name={{selValueC.dictname}} data-code-id={{selValueC.dictcode}}>{{selValueC.dictname}}</option>
+                                        {{else}}
+                                        <option data-ser-id={{selValueC.dictvalue}} data-ser-name={{selValueC.dictname}} data-code-id={{selValueC.dictcode}}>{{selValueC.dictname}}</option>
+                                        {{/if}}
+                                        {{/each}}
+                                        {{/each}}
+                                    </select>
+                                    {{/if}}
+                                    {{else if value1.applyCategory == 'che'}}
+                                    {{if value1.applyDefaultValue}}
+                                    {{each value1.applyValue.idsCategory as item l}}
+
+                                    {{each item.dicts as selValueC j}}
+                                    {{if value1.applyDefaultValue.indexOf(selValueC.dictvalue)==-1 }}
+                                    <input type="checkbox" name={{value1.applyName}} data-checkbox-id ={{selValueC.dictvalue}} disabled /><span style="margin: 0 0.5rem; color: #999999; border-bottom: 0;">{{selValueC.dictname}}</span>
+                                    {{else}}
+                                    <input type="checkbox" checked name={{value1.applyName}} data-checkbox-id ={{selValueC.dictvalue}} disabled /><span style="margin: 0 0.5rem; color: #999999; border-bottom: 0;">{{selValueC.dictname}}</span>
+                                    {{/if}}
+                                    {{/each}}
+
+                                    {{/each}}
+
+                                    {{/if}}
+                                    {{/if}}
+                                </li>
+                                {{/each}}
+                                <div style="clear: both;"></div>
+                            </ul>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+</div>
+<script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/vendors.js"></script><script type="text/javascript" src="./js/application.js"></script></body>
+</html>
